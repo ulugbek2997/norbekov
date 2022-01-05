@@ -1,0 +1,170 @@
+@import '_fonts.scss';
+@import '_global.scss';
+@import '_stdClass.scss';
+
+.home{
+  padding-top: 10px;
+  background: url('../img/Frame\ 265.jpg');
+  object-fit: cover;
+
+  .container{
+    position: relative;
+  }
+  &__inner{
+    width: 85%;
+  }
+
+  .navbar{
+    margin-left: 40px;
+    &__items{
+      column-gap: 40px;
+    }
+
+    &__item{
+      color: $textColor1;
+    }
+  }
+
+  .rightBox{
+    column-gap: 30px;
+
+    &__lang{
+      column-gap: 5px;
+    }
+
+    &__contact{
+      text-align: end;
+      a{
+        color: $textColor2;
+      }
+    }
+  }
+
+  .main{
+    width: 100%;
+
+
+
+    &__title{
+      margin-top: 95px;
+      font-size: 55px;
+      color: $textColor1;
+    }
+
+    &__subtitle{
+      width: 80%;
+      margin-top: 20px;
+      font-size: 18px;
+      color: $textColor1;
+    }
+
+    &__btn{
+      color: white;
+      align-items: center;
+      column-gap: 10px;
+      margin-top: 35px;
+    }
+  }
+
+  .footer{
+    width: 85%;
+    padding: 30px 0;
+
+    &__left{
+      column-gap: 30px; 
+      font-size: 16px;
+    }
+
+    &__coursInfo{
+      p{
+        color: $textColor3;
+      }
+      span{
+        margin-top: 6px;
+      }
+    }
+
+    &__cours{
+      column-gap: 30px;
+      p{
+        color: $textColor2;
+      }
+    }
+
+    .right{
+      font-size: 16px;
+  
+      &__links{
+        margin-top: 6px;
+        column-gap: 40px;
+      }
+  
+      &__link{
+        column-gap: 10px;
+      }
+    }
+  }
+  
+
+
+  .footerInner{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.53);
+  }
+
+}
+
+.author{
+
+  &__inner{
+    width: 85%;
+    padding-top: 80px;
+  }
+
+  &__video{
+    width: 100%;
+    height: 596px;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .body{
+    padding: 25px 0 70px 0;
+
+    &__title{
+      width: 30%;
+      font-size: 40px;
+      line-height: 56px;
+    }
+
+    &__text{
+      font-size: 18px;
+      line-height: 28px;
+      width: 60%;
+    }
+  }
+}
+
+.ourCourses{
+  &__inner{
+    width: 85%;
+  }
+
+  &__title{
+    text-align: center;
+  }
+
+  &__subtitle{
+    text-align: center;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 20px;
+  }
+}

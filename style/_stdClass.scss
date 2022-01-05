@@ -1,0 +1,33 @@
+.container{
+  width: 100%;
+  max-width: 1440px;
+  min-width: 320px;
+}
+
+
+
+.d-flex{
+  display: flex;
+}
+
+.jyContent-spaceBn{
+  display:flex;
+  justify-content: space-between;
+}
+
+
+.jyContent-center{
+  display: flex;
+  justify-content: center;
+}
+
+.fx-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.alItem-center{
+  align-items: center;
+}
+
+
