@@ -2,42 +2,45 @@
 @import '_global.scss';
 @import '_stdClass.scss';
 
+html{
+  scroll-behavior: smooth;
+}
+
+.header .rightBox{
+  column-gap: 30px;
+
+  &__lang{
+    column-gap: 5px;
+  }
+
+  &__contact{
+    text-align: end;
+    a{
+      color: $textColor2;
+    }
+  }
+}
+
+.navbar{
+  margin-left: 40px;
+  &__items{
+    column-gap: 40px;
+  }
+
+  &__item{
+    color: $textColor1;
+  }
+}
+
 .home{
-  padding-top: 10px;
-  background: url('../img/Frame\ 265.jpg');
-  object-fit: cover;
 
   .container{
     position: relative;
+    background: url('../img/Frame\ 265.jpg');
+
   }
   &__inner{
     width: 85%;
-  }
-
-  .navbar{
-    margin-left: 40px;
-    &__items{
-      column-gap: 40px;
-    }
-
-    &__item{
-      color: $textColor1;
-    }
-  }
-
-  .rightBox{
-    column-gap: 30px;
-
-    &__lang{
-      column-gap: 5px;
-    }
-
-    &__contact{
-      text-align: end;
-      a{
-        color: $textColor2;
-      }
-    }
   }
 
   .main{
@@ -59,10 +62,16 @@
     }
 
     &__btn{
+      width: 258px;
       color: white;
       align-items: center;
       column-gap: 10px;
       margin-top: 35px;
+    }
+
+
+    &__right{
+      width: 30%;
     }
   }
 
@@ -125,12 +134,31 @@
   }
 
   &__video{
+    position: relative;
     width: 100%;
     height: 596px;
+
+    iframe{
+      position: static;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__videoBtn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 104px;
+    height: 104px;
+    z-index: 100;
+    transform: translate(-50%, -50%);
 
     img{
       width: 100%;
       height: 100%;
+      border-radius: 60px;
       object-fit: cover;
     }
   }
@@ -155,16 +183,979 @@
 .ourCourses{
   &__inner{
     width: 85%;
+    padding-bottom: 30px;
   }
 
   &__title{
     text-align: center;
+    font-size: 40px;
+    line-height: 48px;
   }
 
   &__subtitle{
     text-align: center;
-    width: 40%;
-    margin-left: 30%;
+    width: 60%;
+    font-size: 18px;
+    line-height: 25px;
+    margin-left: 20%;
     margin-top: 20px;
   }
+
+  &__body{
+    width: 100%;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 20px;
+  }
+
+  .card{
+    margin-top: 10px;
+    width: calc(100% / 4 - 8px );
+
+    &__img{
+      position: relative;
+      height: 150px;
+      width:100%;  
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(249, 251, 253, 0) 0%, #F9FBFD 100%);
+        z-index: 2;
+      }
+    }
+    
+    &__body{
+      position: relative;
+      padding: 10px 20px 15px 20px ;
+      overflow: hidden;
+
+      h4{
+        font-size: 18px;
+        line-height: 28px;
+        width: 60%;
+      }
+
+      p{
+        font-size: 15px;
+        color: $textColor2;
+      }
+
+      a{
+        column-gap: 10px;
+        margin-top: 20px;
+      }
+
+      &::after{
+        content: "";
+        position: absolute;
+        height: 393px;
+        width: 393px;
+        left: -380px;
+        top: 128px;
+        border-radius: 200px;
+        background: #0057FF;
+        opacity: 0.4;
+        z-index: 2;
+        top: 0;
+        transition: 2s;
+      }
+    }
+
+    &__body:hover ,
+    &__body:hover a p,
+    &__body:hover a path
+    {
+      display: block;
+      color: white;
+      stroke:white;
+      transition: 2s;
+    }
+
+    &__body:hover{
+      &::after {
+        left: -110px;
+        z-index: -1;
+      }
+      
+    }
+
+  }
 }
+
+.schedule{
+
+  .container{
+    background: url('../img/Frame\ 265.jpg');
+  }
+  &__inner{
+    width: 85%;
+    padding-bottom: 50px;
+  }
+
+  &__title{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+  }
+
+  &__body{
+    margin-top: 30px;
+    column-gap: 20px;
+  }
+  
+  &__btn{
+    width: 100%;
+    margin-top: 40px;
+
+    button{
+      column-gap: 15px;
+      cursor: pointer;
+    }
+
+    button p{
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  .card{
+    width: calc(100% / 2 - 10px);
+    padding: 10px 10px 10px 20px;
+    margin-top: 20px;
+    background-color: white;
+
+    &__body{
+      width: 60%;
+    }
+
+    &__date{
+      margin-top: 10px;
+      width: 60%;
+    }
+
+    &__text{
+      margin-top: 10px;
+      width: 80%;
+    }
+
+    &__link{
+      width: 95%;
+      margin-top: 20px;
+
+      a{
+        column-gap: 10px;
+      }
+    }
+
+    &__img{
+      width: 40%;
+      height: 100%;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.author2{
+  padding-top: 80px;
+
+  &__inner{
+    width: 85%;
+  }
+  
+  &__row1{
+    width: 100%; 
+  }
+
+  &__cards{
+    column-gap: 20px;
+  }
+
+  .card{
+    height: 348px;
+    width: 592px;
+    padding: 20px;
+    background: url('../img/author2_card.png');
+
+    &__img{
+      width: 200px;
+      height: 200px;
+      flex-shrink: 0;
+  
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__text1{
+      font-size:  20px;
+      line-height: 32px;
+      padding-left: 15px;
+    }
+
+    &__text2{
+      margin-top: 20px
+    }
+  }
+
+  .bigCard{
+    margin-top: 20px;
+    padding: 20px;
+    background: url('../img/author2_card.png');
+
+    &__img{
+    width: 35%;
+    height: 316px;
+    flex-shrink: 0;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    }
+
+    &__body{
+      padding:0 5% 0 3%;
+    }
+
+    &__title{
+      padding: 35px 0;
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    &__text{
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    &__text2{
+      width: 80%;
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+
+
+  }
+
+
+}
+
+.speakers{
+
+  &__inner{
+    width: 85%;
+  }
+
+  &__title{
+    text-align: center;
+    margin-top: 80px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  &__subtitle{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  &__body{
+    margin-top: 70px;
+    position: relative;
+
+    .swiper {
+      position:static;
+      width: 90%;
+      height: 100%;
+
+      .slide{
+        width: 200px;
+        height: 300px;
+
+        &__img{
+          width: 200px;
+          height: 200px;
+
+          img{
+            width: 100%;
+            height: 100%;
+            border: solid 6px white;
+            border-radius: 100px;
+            object-fit: cover;
+          }
+        }
+
+        &__title{
+          text-align: center;
+          margin-top: 25px;
+          font-size: 18px;
+          line-height: 25px;
+        }
+
+        &__subtitle{
+          text-align: center;
+          color: $textColor4;
+          margin-top: 10px;
+          font-size: 15px;
+          line-height: 18px;
+        }
+      }
+
+      .slide:hover .slide__img img{
+        border: $color1 6px solid;
+      }
+
+      &__btn-next{
+        position: absolute;
+        top: 40%;
+        right: 0;
+        z-index: 2;
+      }
+
+      &__btn:hover  path{
+        stroke: white;
+        background-color: $background6;
+      }
+
+      &__btn:hover{
+        background-color: $background6;
+      }
+
+      &__btn-prev{
+        position: absolute;
+        top: 40%;
+        left: 0;
+        z-index: 2;
+      }
+
+    }
+    
+    .swiper-slide {
+      justify-content: center;
+      text-align: center;
+    
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display:flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  }
+
+  &__btn{
+    width: 100%;
+    margin-top: 60px;
+
+    button{
+      column-gap: 15px;
+      cursor: pointer;
+    }
+
+  }
+
+}
+
+.info{
+  &__inner{
+    width: 85%;
+    padding-bottom: 80px;
+  }
+
+  .row1{
+    padding-top: 80px;
+
+    &__img{
+      width: 365px;
+      height: 365px;
+
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 200px;
+        object-fit: cover;
+      }
+    }
+
+    &__body{
+      width: calc(100% - 365px);
+      height: 365px;
+      padding: 0 10px 10px 45px;
+    }
+
+    &__title{
+      width: 88%;
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    &__text{
+      margin-top: 30px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__cards{
+    width: 100%;
+  }
+  .swiperInfo{
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .card{
+    width:100%;
+    height: max-content;
+    padding: 25px 20px 20px 20px;
+    margin-top: 50px;
+    background: url('../img/author2_card.png');
+    cursor: pointer;
+
+    &__name{
+      font-size: 16px;
+      line-height: 16px;
+      color: $textColor4;
+    }
+
+    &__title{
+      margin-top: 5px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__text{
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+  }
+  .swiper-slide {
+    justify-content: center;
+    text-align: center;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display:flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+}
+
+.news{
+  padding: 40px 0;
+  &__container{
+    background: rgba(244, 244, 244, 0.72);
+  }
+  &__inner{
+    width: 85%;
+  }
+
+  &__title{
+    h1{
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    a{
+      font-size: 18px;
+      line-height: 22px;
+      color: $textColor2;
+      border-bottom: solid $textColor2 2px;
+    }
+  }
+
+  .card{
+    width: 100%;
+    height: 452px;
+    padding: 15px;
+
+    &__img{
+      width: 535px;
+      height: 420px;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__body{
+      width: calc(100% - 535px);
+      padding: 0 10px 0 55px;
+    }
+
+    &__title{
+      margin-top: 50px;
+      width: 80%;
+      font-size: 24px;
+      line-height: 35px;
+    }
+
+    &__text{
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 30px;
+      color: $textColor1;
+    }
+  }
+}
+.news__slider{
+  position: relative;
+
+  .swiper2 {
+    position: static;
+    width: 100%;
+    overflow: hidden;
+
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+}
+
+.swiper2{
+
+  &__btn:hover{
+    background-color: $background6;
+  }
+
+  &__btn:hover path{
+    stroke:white
+  }
+}
+
+.swiper2__btns{
+  width: 100%;
+}
+
+.swiper2__btns .btn{
+  &__prev{
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border-radius: 30px;
+    top: 30%;
+    left: 0 - 50px;
+    z-index: 5;
+  }
+
+  &__next{
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border-radius: 30px;
+    top: 30%;
+    right: 0 - 50px;
+    z-index: 5;
+  }
+
+
+}
+
+.slide2{
+  width: 386px;
+  padding: 20px;
+
+  &__title{
+    font-size: 15px;
+    line-height: 24px;
+    align-items: center;
+  }
+
+  &__text{
+    font-size: 15px;
+    line-height: 22px;
+    text-align: start;
+    cursor: pointer;
+  }
+
+  &__text:hover{
+    color: $textColor2;
+  }
+}
+
+.lastPage{
+padding-top: 80px;
+
+  &__inner{
+    width: 85%;
+    background-image: url(../img/bg_lastPage.png);
+  }
+
+  &__body{
+    position: relative;
+    width: 100%;
+
+    .effect{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    }
+  }
+
+  &__title{
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  &__subtitle{
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 10px;
+  }
+
+  &__btn{
+    margin-top: 35px;
+    column-gap: 15px;
+    padding: 15px 77px;
+    cursor: pointer;
+
+    p{
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+}
+
+.lastPage .footer{
+  padding: 65px 0;
+  background-color: white;
+
+  .box{
+    &__address{
+      width: 280px;
+      font-size: 18px;
+      line-height: 22px;
+      padding-bottom: 20px;
+    }
+
+    &__addressLink{
+      p{
+        font-size: 15px;
+        line-height: 18px;
+        color: $textColor2;
+      }
+    }
+
+    &__name{
+      margin-top: 10px;
+      text-align: center;
+      color: $textColor4;
+    }
+
+    &__callNumber{
+      p{
+        font-size: 18px;
+        line-height: 22px;
+        span{
+          color: $textColor2;
+        }
+      }
+    }
+
+    &__links{
+      margin-top: 20px;
+      column-gap: 15px;
+      a{
+        padding-right: 15px;
+      }
+    }
+
+  }
+}
+
+// cantact page
+
+.contact{
+  &__inner{
+    width: 85%;
+
+    iframe{
+      width: 100%;
+      margin-top: 35px;
+    }
+  }
+
+  &__title{
+    font-size: 40px;
+    line-height: 50px;
+    padding-bottom: 35px; ;
+  }
+}
+
+.contact .header{
+  padding: 20px 0;
+}
+
+.contact .header .rightBox{
+
+  &__number{
+    a{
+      column-gap: 5px;
+      cursor: pointer;
+      p{
+        color: black;
+      }
+
+      span{
+        color: $textColor2
+      }
+    }
+
+
+
+  }
+}
+
+.cantact__body{
+  height: calc(max-content + 100px);
+}
+
+.cantact__body .left{
+  padding: 40px;
+   &__logo{
+     width: 142px;
+     height: 36px;
+
+     img{
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+     }
+   }
+
+   &__contact{
+     margin: 50px 0;
+
+     p{
+       font-size: 18px;
+       line-height: 22px;
+       span{
+         color: $textColor2;
+       }
+     }
+   }
+
+   &__address{
+     padding-bottom: 20px;
+     width: 283px;
+   }
+
+   &__link{
+     font-size: 15px;
+     line-height: 19px;
+     color: $textColor2;
+   }
+
+   &__icons{
+     margin-top: 20px;
+   }
+
+   &__icons:last-child{
+    margin-left: 15px;
+  }
+
+}
+
+.cantact__body .right{
+  padding: 0 0 0 40px;
+  background-color: $background3;
+
+  &__title{
+    margin-top: 70px;
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  &__subtitle{
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  &__btn{
+    width: 60%;
+    margin-top: 70px;
+    column-gap: 10px;
+    cursor: pointer;
+  }
+
+  &__img{
+    width: 60%;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit:cover ;
+    }
+  }
+}
+
+// modal
+
+.modal{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 900;
+  background-color: rgba(0,0,0,0.2);
+}
+
+
+.modalContent{
+  width: 50%;
+  padding: 30px 25px;
+  background: #EFF9FF;
+  z-index: 10;
+
+  &__btn-close{
+    text-align: end;
+
+    button{
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+  }
+
+  &__title{
+    text-align: center;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  &__subtitle{
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 15px;
+    padding-bottom: 40px;
+  }
+
+  &__inputName{
+    padding: 15px 0 15px 30px;
+    height: 54px;
+    width: 40%;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 30px 0 0 30px;
+  }
+
+  &__inputNumber{
+    padding: 15px 0 15px 30px;
+    height: 54px;
+    width: 40%;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 0 30px 30px 0;
+  }
+
+  &__btn{
+    width: 100%;
+    margin-top: 20px;
+    button{
+      column-gap: 10px;
+      cursor: pointer;
+
+      p{
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+
+
+  &__btn-close2{
+    margin-top: 20px;
+
+    button{
+      font-size: 18px;
+      line-height: 22px;
+      column-gap: 10px;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+  }
+
+}
+
+.activ{
+  display: flex;
+  justify-content: center;
+}
+
+.playerBtnEffect{
+ transition: 2s;
+ opacity: 0;
+}
+
+@import './media.scss';

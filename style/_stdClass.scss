@@ -1,9 +1,12 @@
 .container{
   width: 100%;
+  display: flex;
+  justify-content: center;
   max-width: 1440px;
   min-width: 320px;
-}
+  margin: 0 auto;
 
+}
 
 
 .d-flex{
@@ -19,6 +22,11 @@
 .jyContent-center{
   display: flex;
   justify-content: center;
+}
+
+.jyContent-spacrAd{
+  display: flex;
+  justify-content: space-around;
 }
 
 .fx-wrap{
