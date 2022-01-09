@@ -80,14 +80,20 @@
   } 
 
   .lastPage .body{
-    position: relative;
 
     &__left{
       position: absolute;
       z-index: 10;
       bottom: 0;
     }
+
+    &__right{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
   }
+
 
   .footer__boxs{
     justify-content: space-between;
@@ -102,6 +108,33 @@
 }
 
 @media only screen and (max-width: 950px) {
+
+  .header{
+    &__inner{
+      display: block;
+    }
+
+    &__left{
+      justify-content: space-between;
+    }
+
+    &__right{
+      display: none;
+      padding-top: 30px;
+    }
+  }
+
+  .navbar{
+    margin-left: 0;
+    &__items{
+      display: block;
+    }
+  }
+
+  .burger{
+    display: inline-block;
+  }
+
   .info__row1 .row1{
     display: block;
 
@@ -150,6 +183,59 @@
 }
 
 @media only screen and (max-width: 675px) {
+
+  .banner{
+    height: 470px;
+    &__img{
+      height: 470px;
+    }
+  }
+
+  .banner__slide .body{
+    &__title{
+      font-size: 40px;
+      line-height: 48px;
+      padding: 10px 0;
+    }
+  }
+
+  .booksSwiper{
+
+    &__prev{
+      left: 0;
+    }
+
+    &__next{
+      right: 0;
+    }
+  }
+
+  .booksSwiper .slide{
+
+    &__title{
+      margin-top: 22px;
+      font-size: 32px;
+      line-height: 42px;
+    }
+
+    &__link{
+
+      span{
+        font-size: 22px;
+        line-height: 28px;
+      }
+
+      svg{
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+
+  .author__inner{
+    margin-top: 0;
+  }
+
   .lastPage__img{
     width: 100%;
 
@@ -184,6 +270,12 @@
       font-size: 15px;
       line-height: 22px;
     }
+  }
+
+  .booksSwiper .slide__title{
+    width: 100%;
+    font-size: 22px;
+    line-height: 28px;
   }
 
   .ourCourses{
@@ -268,9 +360,24 @@
   }
 
   &__btn{
+    width: 100%;
+    height: 42px;
     margin-top: 20px;
   }
  } 
+
+ .speakersSwiper__btn{
+   width: 42px;
+   height: 42px;
+ }
+
+ .speakersSwiper__btn-next{
+   right: -20px;
+ }
+
+ .speakersSwiper__btn-prev{
+  left: -20px;
+ }
 
  .info .row1__img{
   margin-left: calc(50% - 182px);
@@ -307,6 +414,15 @@
  }
 
  .lastPage{
+
+  &__body{
+    height: 500px;
+  }
+
+   &__{
+     height: 500px;
+   }
+
    &__title{
      font-size: 24px;
      line-height: 32px;
@@ -317,6 +433,7 @@
       line-height: 16px;
    }
  }
+
  .lastPage__btn{
    width: 40%;
    padding: 15px 0;
@@ -424,10 +541,46 @@
     &__links{
       margin-top: 0;
     }
-  } 
+  }
+  
+  .banner__slide .body{
+    &__title{
+      width: 80%;
+      font-size: 30px;
+      line-height: 38px;
+    }
+
+    &__subtitle{
+      width: 400px;
+      font-size: 16px;
+    }
+  }
 }
 
 @media only screen and (max-width: 420px) {
+
+  .banner__slide .body{
+
+    &__date{
+      margin-top: 60px;
+    }
+
+    &__title{
+      width: 80%;
+      font-size: 25px;
+      line-height: 38px;
+    }
+
+    &__subtitle{
+      width: 80%;
+      font-size: 14px;
+    }
+
+    &__btnContainer{
+      display: flex;
+      justify-content: center;
+    }
+  }
 
   .ourCourses{
     &__body{
@@ -482,6 +635,11 @@
   .author__videoBtn {
     width: 50px;
     height: 50px;
+  }
+
+  .booksSwiper .slide__title{
+    font-size: 28px;
+    line-height: 38px;
   }
 
   .ourCourses{ 
@@ -604,6 +762,10 @@
  }
 
  .lastPage {
+
+  &__body{
+    height: 350px;
+  }
     &__title {
    font-size: 18px;
    line-height: 22px;
@@ -636,4 +798,40 @@
 
 @media only screen and (max-width: 320px){
 
+  .banner__slide .body{
+
+    &__date{
+      font-size: 14px;
+    }
+
+    &__title{
+      width: 80%;
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    &__subtitle{
+      width: 260px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__btnContainer{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+ .lastPage{
+   &__body{
+     height: 260px;
+   }
+ }
+
+ .booksSwiper .slide__title{
+   font-size: 22px;
+   line-height: 22px;
+   width: 100%;
+ }
 }

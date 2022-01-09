@@ -1,24 +1,81 @@
 @import '_fonts.scss';
 @import '_global.scss';
 @import '_stdClass.scss';
+@import './allCoursess.scss';
 
 html{
   scroll-behavior: smooth;
 }
 
-.header .rightBox{
-  column-gap: 30px;
+.header{
+  padding: 10px 0;
+
+  &__inner{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__right{
+    width: 100%;
+    column-gap: 30px;
+  }
+
+}
+
+.header__right .rightBox{
+
+  &__main{
+    column-gap: 30px;
+  }
 
   &__lang{
     column-gap: 5px;
+
+    a{
+      font-size: 15px;
+      line-height: 18px;
+    }
   }
 
   &__contact{
     text-align: end;
+    p{
+      font-size: 18px;
+      line-height: 22px;
+    }
+
     a{
       color: $textColor2;
+      border-bottom: solid 1px $color1;
     }
   }
+}
+
+.burger{
+  display: none;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 .navbar{
@@ -28,7 +85,117 @@ html{
   }
 
   &__item{
-    color: $textColor1;
+    a{
+      color: $textColor1;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
+
+.banner{
+  width: 100%;
+  height: 615px;
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    width: 100%;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  &__slide{
+    width: 100%;
+  }
+
+  &__img{
+    width: 100%;
+    height: 615px;
+    background-color: #0057FF;
+    
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: red;
+    }
+  }
+
+  &__main{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background: linear-gradient(89.65deg, rgba(0, 0, 0, 0.48) 30.98%, rgba(0, 0, 0, 0) 107.92%),
+  }
+
+  .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: $background6;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet .swiper-pagination-bullet-active{
+    padding: 5px;
+    background: red;
+  }
+
+}
+
+.banner__slide .body{
+  display: block;
+  width: 85%;
+  height: 615px;
+
+  &__date{
+    margin-top: 120px;
+    font-size: 16px;
+    line-height: 25px;
+    color: #FFFFFF;
+  }
+
+  &__title{
+    width: 624px;
+    font-size: 55px;
+    line-height: 67px;
+    padding: 8px 0 20px 0;
+    color: #FFFFFF;
+  }
+
+  &__subtitle{
+    width: 483px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+  }
+
+  &__btn{
+    width: 180px;
+    height: 55px;
+    margin-top: 20px;
+    column-gap: 15px;
+
+    div{
+      column-gap: 15px;
+    }
   }
 }
 
@@ -180,7 +347,110 @@ html{
   }
 }
 
+.author__swiper{
+  position: relative;
+}
+
+.booksSwiper{
+ position: static;
+ overflow: hidden;
+ width: 100%;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  &__btn{
+    width: 56px;
+    height: 56px;
+    background-color: #E5F5FC;
+    border-radius: 30px;
+  }
+
+    &__btn:hover{
+      background-color: $background6;
+    }
+  
+    &__btn:hover path{
+      stroke:white
+    }
+
+  &__prev{
+    position: absolute;
+    left: -60px;
+    z-index: 5;
+    top: calc(50% - 24px);
+  }
+
+  &__next{
+    position: absolute;
+    top: calc(50% - 24px);
+    right: -60px;
+    z-index: 5;
+  }
+
+}
+
+.booksSwiper .slide{
+  // width: calc(100% / 4 - 8px);
+  padding: 20px;
+  background:#EEF8FF;
+
+  &__img{
+    width: 100%;
+
+    img{
+      width: 90%;
+      margin: 5% 5% 0 5% ;
+      object-fit: cover;
+    }
+  }
+
+  &__title{
+    width: 85%;
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: start;
+  }
+
+  &__link{
+    align-items: center;
+    column-gap: 15px;
+    margin-top: 20px;
+
+    span{
+      color: $color1;
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}
+
 .ourCourses{
+  padding-top: 20px;
+  
   &__inner{
     width: 85%;
     padding-bottom: 30px;
@@ -207,89 +477,87 @@ html{
     column-gap: 10px;
     margin-top: 20px;
   }
+}
 
-  .card{
-    margin-top: 10px;
-    width: calc(100% / 4 - 8px );
+.ourCourses .card{
+  margin-top: 10px;
+  width: calc(100% / 4 - 8px );
 
-    &__img{
-      position: relative;
-      height: 150px;
-      width:100%;  
+  &__img{
+    position: relative;
+    height: 150px;
+    width:100%;  
 
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      &::after{
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 50%;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(180deg, rgba(249, 251, 253, 0) 0%, #F9FBFD 100%);
-        z-index: 2;
-      }
-    }
-    
-    &__body{
-      position: relative;
-      padding: 10px 20px 15px 20px ;
-      overflow: hidden;
-
-      h4{
-        font-size: 18px;
-        line-height: 28px;
-        width: 60%;
-      }
-
-      p{
-        font-size: 15px;
-        color: $textColor2;
-      }
-
-      a{
-        column-gap: 10px;
-        margin-top: 20px;
-      }
-
-      &::after{
-        content: "";
-        position: absolute;
-        height: 393px;
-        width: 393px;
-        left: -380px;
-        top: 128px;
-        border-radius: 200px;
-        background: #0057FF;
-        opacity: 0.4;
-        z-index: 2;
-        top: 0;
-        transition: 2s;
-      }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    &__body:hover ,
-    &__body:hover a p,
-    &__body:hover a path
-    {
-      display: block;
-      color: white;
-      stroke:white;
+    &::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba(249, 251, 253, 0) 0%, #F9FBFD 100%);
+      z-index: 2;
+    }
+  }
+  
+  &__body{
+    position: relative;
+    padding: 10px 20px 15px 20px ;
+    overflow: hidden;
+
+    h4{
+      font-size: 18px;
+      line-height: 28px;
+      width: 60%;
+    }
+
+    p{
+      font-size: 15px;
+      color: $textColor2;
+    }
+
+    a{
+      column-gap: 10px;
+      margin-top: 20px;
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      height: 393px;
+      width: 393px;
+      left: -380px;
+      top: 128px;
+      border-radius: 200px;
+      background: #0057FF;
+      opacity: 0.4;
+      z-index: 2;
+      top: 0;
       transition: 2s;
     }
+  }
 
-    &__body:hover{
-      &::after {
-        left: -110px;
-        z-index: -1;
-      }
-      
-    }
+  &__body:hover ,
+  &__body:hover a p,
+  &__body:hover a path
+  {
+    display: block;
+    color: white;
+    stroke:white;
+    transition: 2s;
+  }
 
+  &__body:hover{
+    &::after {
+      left: -110px;
+      z-index: -1;
+    }   
   }
 }
 
@@ -482,13 +750,14 @@ html{
   }
 
   &__body{
-    margin-top: 70px;
     position: relative;
+    margin-top: 70px;
 
-    .swiper {
+    .speakersSwiper {
       position:static;
       width: 90%;
       height: 100%;
+      overflow: hidden;
 
       .slide{
         width: 200px;
@@ -526,32 +795,8 @@ html{
       .slide:hover .slide__img img{
         border: $color1 6px solid;
       }
-
-      &__btn-next{
-        position: absolute;
-        top: 40%;
-        right: 0;
-        z-index: 2;
-      }
-
-      &__btn:hover  path{
-        stroke: white;
-        background-color: $background6;
-      }
-
-      &__btn:hover{
-        background-color: $background6;
-      }
-
-      &__btn-prev{
-        position: absolute;
-        top: 40%;
-        left: 0;
-        z-index: 2;
-      }
-
     }
-    
+
     .swiper-slide {
       justify-content: center;
       text-align: center;
@@ -570,6 +815,7 @@ html{
       -webkit-align-items: center;
       align-items: center;
     }
+    
   }
 
   &__btn{
@@ -583,6 +829,42 @@ html{
 
   }
 
+}
+
+.speakersSwiper{
+  position: relative;
+
+  &__btn{
+    width: 72px;
+    height: 72px;
+    background: #E5F5FC;
+    border-radius: 50px;
+  }
+
+  &__btn:hover{
+    background-color: $background6;
+  }
+
+  &__btn:hover path{
+    stroke:white
+  }
+
+  &__btns{
+    position: absolute;
+    width: 90%;
+    top: calc(50% - 37px);
+    z-index: 5;
+  }
+
+  &__btn-prev{
+    position: absolute;
+    left: -58px;
+  }
+
+  &__btn-next{
+    position: absolute;
+    right: -58px;
+  }
 }
 
 .info{
@@ -681,7 +963,7 @@ html{
 }
 
 .news{
-  padding: 40px 0;
+  padding: 40px 0 0 0;
   &__container{
     background: rgba(244, 244, 244, 0.72);
   }
@@ -746,7 +1028,6 @@ html{
     position: static;
     width: 100%;
     overflow: hidden;
-
   }
 
   .swiper-slide {
@@ -837,11 +1118,11 @@ padding-top: 80px;
 
   &__inner{
     width: 85%;
-    background-image: url(../img/bg_lastPage.png);
   }
 
   &__body{
     position: relative;
+    height: 600px;
     width: 100%;
 
     .effect{
@@ -850,6 +1131,16 @@ padding-top: 80px;
       width: 100%;
       height: 150px;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    }
+
+  }
+
+  &__img{
+    right: 0;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -878,7 +1169,11 @@ padding-top: 80px;
 
 }
 
-.lastPage .footer{
+.footer{
+
+  &__inner{
+    width: 85%;
+  }
   padding: 65px 0;
   background-color: white;
 
@@ -1156,6 +1451,10 @@ padding-top: 80px;
 .playerBtnEffect{
  transition: 2s;
  opacity: 0;
+}
+
+.activeBlock{
+  display: inline-block;
 }
 
 @import './media.scss';

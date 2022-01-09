@@ -1,23 +1,30 @@
 const body = document.querySelector('body');
 const modal = document.getElementById('modal');
 const video1 = document.getElementById('authorVideo');
-// btn
-// const modalBtn = document.getElementById('send');
+
 const modalBtn2 = document.getElementById('btnConsultation');
 const closeBtn = document.getElementById('closeBtn');
 const closeBtn2 = document.getElementById('closeBtn2');
-// const playerBtn = document.getElementById('playerBtn');
-// tab
+
 const bodyBtn =document.getElementById('bodyBtn');
 const mindBtn =document.getElementById('mindBtn');
 const soulsBtn =document.getElementById('soulsBtn');
 const spiritBtn =document.getElementById('spiritBtn');
-// 
+ 
 closeBtn.addEventListener('click', closeModal);
 closeBtn2.addEventListener('click', closeModal);
-// playerBtn.addEventListener('click', playPause);
 
 let modalBtns = document.querySelectorAll('.modalBtn');
+
+
+let headerRight = document.getElementsByClassName('header__right');
+
+function burgerMenu(x) {
+  console.log(headerRight);
+  x.classList.toggle("change");
+  headerRight.classList.toggle('activeBlock');
+}
+
 
 for(let i=0;i<modalBtns.length;i++){
   modalBtns[i].addEventListener('click', showModal);
@@ -38,20 +45,6 @@ for (var i = 0; i < tabBtns.length; i++) {
     });
 }
 
-
-// function playPause(){
-  
-//   if (video1.paused){
-//     video1.playVideo();
-//     playerBtn.classList.add('playerBtnEffect');
-//   }  
-//   else {
-//     video1.stopVideo(); 
-//     playerBtn.classList.remove('playerBtnEffect');
-//   }
-// }
-
-
 function showModal(){
  modal.classList.add('activ');
  body.style.overflow = 'hidden'
@@ -68,5 +61,4 @@ window.onclick = function(event){
     body.style.overflow = 'initial';
   }
 }
-
 

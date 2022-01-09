@@ -1,10 +1,52 @@
-var swiper = new Swiper('.swiper', {
+
+
+// swiperBanner
+var swiper = new Swiper(".bannerSwiper", {
+  slidesPerView: 1,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+// booksSwiper
+var swiper2 = new Swiper('.booksSwiper', {
   slidesPerView: 4,
+  spaceBetween:10,
   navigation: {
-    nextEl: '.swiper__btn-next',
-    prevEl: '.swiper__btn-prev',
+    nextEl: '.booksSwiper__next',
+    prevEl: '.booksSwiper__prev',
   },
   breakpoints: {
+    240: {
+      slidesPerView: 1,
+    },
+      480: {
+      slidesPerView: 2,
+    },
+    670: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1050: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+// speakersSwiper
+var swiper = new Swiper('.speakersSwiper', {
+  slidesPerView: 4,
+  navigation: {
+    nextEl: '.speakersSwiper__btn-next',
+    prevEl: '.speakersSwiper__btn-prev',
+  },
+  breakpoints: {
+    240: {
+      slidesPerView: 1,
+    },
     320: {
       slidesPerView: 1,
     },
@@ -20,12 +62,7 @@ var swiper = new Swiper('.swiper', {
   },
 });
 
-
-
-
-
-// swiper2
-
+// newsSwiper
 var swiper2 = new Swiper('.swiper2', {
   slidesPerView: 3,
   navigation: {
@@ -33,6 +70,9 @@ var swiper2 = new Swiper('.swiper2', {
     prevEl: '.btn__prev',
   },
   breakpoints: {
+    240: {
+      slidesPerView: 1,
+    },
     320: {
       slidesPerView: 1,
     },
@@ -49,7 +89,6 @@ var swiper2 = new Swiper('.swiper2', {
 });
 
 // swiperInfo
-
 var swiper2 = new Swiper('.swiperInfo', {
   slidesPerView: 4,
   spaceBetween:20,
@@ -58,6 +97,9 @@ var swiper2 = new Swiper('.swiperInfo', {
     prevEl: '.btn__prev',
   },
   breakpoints: {
+    240: {
+      slidesPerView: 1,
+    },    
     320: {
       slidesPerView: 1,
     },
@@ -65,10 +107,10 @@ var swiper2 = new Swiper('.swiperInfo', {
       slidesPerView: 2,
     },
     950: {
-      slidesPerView: 3,
+      slidesPerView: 4,
     },
     1440: {
-      slidesPerView: 4,
+      slidesPerView: 5,
     },
   },
 });

@@ -9,104 +9,95 @@
   <title>Norbekov.uz</title>
 </head>
 <body>
-    <!-- <section class="home">
-      <div class="container">
-        <div class="home__inner">
-          
-          <header class="header d-flex alItem-center jyContent-spaceBn">
-          
-            <div class="header__left d-flex alItem-center">
-              <div class="header__logo">
-                <img src="./img/image 4.png" alt="">
-                  
-              </div>
-              <nav class="header__navbar navbar">
-                <ul class="navbar__items d-flex">
-                  <li class="navbar__item ir__regular"><a href="./index.html">Главная</a></li>
-                  <li class="navbar__item ir__regular"><a href="#ourCourses">Курсы</a></li>
-                  <li class="navbar__item ir__regular"><a href="#schedule">Расписания</a></li>
-                  <li class="navbar__item ir__regular"><a href="./cantact.html">Контакты</a></li>
-                </ul>
-              </nav>
-            </div>
-  
-            <div class="header__rightBox rightBox d-flex">
-              <ul class="rightBox__lang d-flex">
-                <li><a class="ir__regular" href="">Ру</a></li>
-                <li><a href="">/</a></li>
-                <li><a class="ir__regular" href="">O’z</a></li>
-              </ul>
-              <div class="rightBox__contact">
-                <p class="ir__regular">(+998)93 561-62-76</p>
-                <a class="ir__regular" href="">Заказать звонок</a>
-              </div>
-            </div>
-          </header>
-
-          <div class="home__main main d-flex jyContent-spaceBn">
-            <div class="main__left">
-             <h2 class="main__title mt__semiBold">Психологическая помощь семье</h2>
-             <h4 class="main__subtitle ir__light">Психологический центр «Центр тренингов» предоставляет услуги психологов в Ташкенте, имеющих профильное психологическое образование</h4>
-             <a href="#schedule" class="main__btn btn btn__blue">
-               <p>Расписание курсов</p>
-               <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.6639 7.05304L15.6109 11L11.6639 14.947M6.41294 11H15.5989M20.3339 11C20.3339 16.1556 16.1545 20.335 10.9989 20.335C5.84336 20.335 1.66394 16.1556 1.66394 11C1.66394 5.84446 5.84336 1.66504 10.9989 1.66504C16.1545 1.66504 20.3339 5.84446 20.3339 11Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-             </a>
-            </div>
-            <div class="main__right">
-              <div class="main__img">
-                  <img src="./img/trevoca-girl 1.png" alt="">
-              </div>
-            </div>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__left d-flex alItem-center">
+          <div class="header__logo">
+            <img src="./img/image 4.png" alt="">  
+          </div>
+          <div class="burger" onclick="burgerMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
           </div>
         </div>
-        <div class="footerInner d-flex jyContent-center">
-          <div class="home_footer footer d-flex alItem-center jyContent-spaceBn">
-            <div class="footer__left d-flex">
-              <div class="footer__coursInfo">
-                <p class="ir__regular">Ближающий курс:</p>
-                <span class="ir__semiBold">24 ноября в 15:00</span>
-              </div>
-              <div class="footer__cours alItem-center d-flex">
-                <a href="">
-                  <p class="ir__semiBold">Коррекция зрения | авторский курс <br> Елены Петровны Волковой</p>
-                </a>
-                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M22.4247 12.5437L30.8811 21L22.4247 29.4563M11.1746 21H30.8554M41 21C41 32.0457 32.0457 41 21 41C9.9543 41 1 32.0457 1 21C1 9.95431 9.9543 1 21 1C32.0457 1 41 9.95431 41 21Z" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-              </div>
-            </div>
-            <div class="footer__right right">
-              <p class="right__title">Мы в соц. сетях:</p>
-              <div class="right__links d-flex">
-                <div class="right__link d-flex">
-                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.5 0H5C2.23875 0 0 2.23875 0 5V17.5C0 20.2612 2.23875 22.5 5 22.5H12.0263V13.7987H9.0975V10.3925H12.0263V7.88625C12.0263 4.98125 13.8025 3.3975 16.395 3.3975C17.2687 3.395 18.1413 3.44 19.01 3.52875V6.56625H17.225C15.8125 6.56625 15.5375 7.23375 15.5375 8.21875V10.3875H18.9125L18.4737 13.7937H15.5175V22.5H17.5C20.2612 22.5 22.5 20.2612 22.5 17.5V5C22.5 2.23875 20.2612 0 17.5 0Z" fill="#0057FF"/>
-                    </svg>                  
-                  <p class="ir__bold"><a href="">@norbekovuz</a></p>
-                </div>
-                <div class="right__link d-flex">
-                  <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24.9775 2.7325C24.69 1.6575 23.8425 0.81 22.7675 0.5225C20.8175 2.6077e-07 13 0 13 0C13 0 5.1825 2.6077e-07 3.2325 0.5225C2.1575 0.81 1.31 1.6575 1.0225 2.7325C0.5 4.6825 0.5 10 0.5 10C0.5 10 0.5 15.3175 1.0225 17.2675C1.31 18.3425 2.1575 19.19 3.2325 19.4775C5.1825 20 13 20 13 20C13 20 20.8175 20 22.7675 19.4775C23.8437 19.19 24.69 18.3425 24.9775 17.2675C25.5 15.3175 25.5 10 25.5 10C25.5 10 25.5 4.6825 24.9775 2.7325ZM10.5 13.2475V6.7525C10.5 6.27125 11.0212 5.97125 11.4375 6.21125L17.0625 9.45875C17.4787 9.69875 17.4787 10.3012 17.0625 10.5412L11.4375 13.7887C11.0212 14.03 10.5 13.7287 10.5 13.2475Z" fill="#0057FF"/>
-                    </svg>                  
-                  <p class="ir__bold"><a href="">norbekovuz</a></p>
-                </div>
-              </div>
+        <div class="header__right rightBox jyContent-spaceBn alItem-center">
+          <nav class="header__navbar navbar">
+            <ul class="navbar__items d-flex">
+              <li class="navbar__item "><a class="ir__regular" href="./index.html">Главная</a></li>
+              <li class="navbar__item "><a class="ir__regular" href="#ourCourses">Курсы</a></li>
+              <li class="navbar__item "><a class="ir__regular" href="#schedule">Расписания</a></li>
+              <li class="navbar__item "><a class="ir__regular" href="./cantact.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="rightBox__main d-flex">
+            <ul class="rightBox__lang d-flex alItem-center">
+              <li><a class="ir__regular" href="">Ру</a></li>
+              <li>/</li>
+              <li><a class="ir__regular" href="">O’z</a></li>
+            </ul>
+            <div class="rightBox__contact">
+              <p class="ir__regular">(+998)93 561-62-76</p>
+              <a class="ir__regular" href="">Заказать звонок</a>
             </div>
           </div>
         </div>
       </div>
-    </section>  -->
+    </div>
+
+  </header>
+
+   <section class="banner">
+    <div class="container">
+      <div class="swiper bannerSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="banner__slide">
+              <div class="banner__img">
+                <img src="./img/banner1.png" alt="">
+              </div>
+              <div class="banner__main">
+                <div class="container" >
+                  <div class="banner__slide body">
+                    <div class="body__date ir__light">10 января 2022</div>
+                    <h2 class="body__title mt__semiBold">
+                      Самооздоровления 
+                        и развития личности
+                    </h2>
+                    <p class="body__subtitle ir__light">
+                      Психологический центр «Центр тренингов» предоставляет услуги психологов в Ташкенте, имеющих профильное психологическое образование
+                    </p>
+                    <div class="body__btnContainer">
+                      <a href="" class="body__btn btn btn__blue d-flex alItem-center">
+                        <p class="ir__medium">Записация</p>
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.664 7.05304L15.611 11L11.664 14.947M6.413 11H15.599M20.334 11C20.334 16.1556 16.1546 20.335 10.999 20.335C5.84342 20.335 1.664 16.1556 1.664 11C1.664 5.84446 5.84342 1.66504 10.999 1.66504C16.1546 1.66504 20.334 5.84446 20.334 11Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="banner__slide">
+              <div class="banner__img">
+                <img src="./img/banner2.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section> 
     <section class="author">
       <div class="container">
         <div class="author__inner">
           <div  class="author__video">
             <div id="player"></div>
-            <!-- <video id="authorVideo" src="https://youtu.be/LNkK39xsQe4" type="video/mp4" controls></video> -->
-            <!-- <iframe id="authorVideo"  src="https://www.youtube.com/embed/LNkK39xsQe4"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> -->
-
-            </iframe>
             <div id="playerBtn" class="author__videoBtn">
               <img src="./img/play.png" alt="">
             </div>
@@ -117,6 +108,114 @@
               “Для меня не является самоцелью подготовка богатых людей. Я помогаю осваивать искусство и техникупобеждать, творить добро, любить и быть любимым. Я обучаю не бизнесу, я обучаю быть Личностью. Бытьсамим собой и быть выше всего. Чтобы стать богатым, не нужно хвататься за любую деятельность, котораясразу принесет доход. Работа ради денег рано или поздно принесет страдание. И обязательно наступит день,когда человек просто не сможет заставить себя работать. Это аксиома. Поэтому мечтать надо не об огромныхденьгах, а о самореализации”.
             </p>
           </div>
+            <div class="author__swiper">
+              <div class="booksSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <div class="booksSwiper slide">
+                      <div class="slide__img">
+                        <img src="./img/book1.png" alt="">
+                      </div>
+                      <div class="slide__body">
+                        <p class="slide__title ir__regular">
+                          Опыт дурака, или Ключ к прозрению.
+                        </p>
+                        <a class="slide__link d-flex alItem-center" href="">
+                          <span class="ir__regular">Подробнее</span>
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                      </div>
+                     </div> 
+                    </div>
+                  <div class="swiper-slide">
+                      <div class="booksSwiper slide">
+                       <div class="slide__img">
+                         <img src="./img/book2.png" alt="">
+                       </div>
+                       <div class="slide__body">
+                         <p class="slide__title ir__regular">
+                           Опыт дурака, или Ключ к прозрению.
+                         </p>
+                         <a class="slide__link d-flex alItem-center" href="">
+                           <span class="ir__regular">Подробнее</span>
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </a>
+                       </div>
+                      </div> 
+                    </div>
+                   <div class="swiper-slide">
+                      <div class="booksSwiper slide">
+                       <div class="slide__img">
+                         <img src="./img/book3.png" alt="">
+                       </div>
+                       <div class="slide__body">
+                         <p class="slide__title ir__regular">
+                           Опыт дурака, или Ключ к прозрению.
+                         </p>
+                         <a class="slide__link d-flex alItem-center" href="">
+                           <span class="ir__regular">Подробнее</span>
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </a>
+                       </div>
+                      </div> 
+                    </div>
+                  <div class="swiper-slide">
+                      <div class="booksSwiper slide">
+                       <div class="slide__img">
+                         <img src="./img/book1.png" alt="">
+                       </div>
+                       <div class="slide__body">
+                         <p class="slide__title ir__regular">
+                           Опыт дурака, или Ключ к прозрению.
+                         </p>
+                         <a class="slide__link d-flex alItem-center" href="">
+                           <span class="ir__regular">Подробнее</span>
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </a>
+                       </div>
+                      </div> 
+                    </div>
+                  <div class="swiper-slide">
+                      <div class="booksSwiper slide">
+                       <div class="slide__img">
+                         <img src="./img/book2.png" alt="">
+                       </div>
+                       <div class="slide__body">
+                         <p class="slide__title ir__regular">
+                           Опыт дурака, или Ключ к прозрению.
+                         </p>
+                         <a class="slide__link d-flex alItem-center" href="">
+                           <span class="ir__regular">Подробнее</span>
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                         </a>
+                       </div>
+                      </div> 
+                    </div>
+                </div>
+                <div class="booksSwiper__btns">
+                  <div class="booksSwiper__btn booksSwiper__prev jyContent-center alItem-center">
+                    <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.33496 6.05394L5.38796 10.0009L9.33496 13.9479M14.586 10.0009L5.39896 10.0009M9.99996 0.665937C4.84438 0.665937 0.664963 4.84536 0.664963 10.0009C0.664963 15.1565 4.84438 19.3359 9.99996 19.3359C15.1555 19.3359 19.335 15.1565 19.335 10.0009C19.335 4.84536 15.1555 0.665937 9.99996 0.665937Z" stroke="#7386AC" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+                  <div class="booksSwiper__btn booksSwiper__next  jyContent-center alItem-center">
+                    <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.665 6.05394L14.612 10.0009L10.665 13.9479M5.41404 10.0009L14.601 10.0009M10 0.665937C15.1556 0.665937 19.335 4.84536 19.335 10.0009C19.335 15.1565 15.1556 19.3359 10 19.3359C4.84446 19.3359 0.665039 15.1565 0.665039 10.0009C0.665038 4.84536 4.84446 0.665937 10 0.665937Z" stroke="#7386AC" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </section>
@@ -468,8 +567,8 @@
         <div class="speakers__inner">
           <h2 class="speakers__title mt__semiBold">Наши спикеры</h2>
           <h4 class="speakers__subtitle ir__light">Психологический центр «Центр тренингов» предоставляет услуги психологов в Ташкенте</h4>
-          <div class="speakers__body">
-            <div class="swiper">
+          <div class="speakers__body jyContent-center">
+            <div class="speakersSwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <a href="" class="slide">
@@ -544,16 +643,18 @@
                   </a>
                 </div>
               </div>
-              <div class="swiper__btn swiper__btn-next alItem-center jyContent-center">
-                <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.665 6.05394L14.612 10.0009L10.665 13.9479M5.41404 10.0009L14.601 10.0009M10 0.665937C15.1556 0.665937 19.335 4.84536 19.335 10.0009C19.335 15.1565 15.1556 19.3359 10 19.3359C4.84446 19.3359 0.665039 15.1565 0.665039 10.0009C0.665038 4.84536 4.84446 0.665937 10 0.665937Z" stroke="#7386AC" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+              <div class="speakersSwiper__btns jyContent-spaceBn">
+                <div class="speakersSwiper__btn  speakersSwiper__btn-prev jyContent-center alItem-center">
+                  <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.33496 6.05394L5.38796 10.0009L9.33496 13.9479M14.586 10.0009L5.39896 10.0009M9.99996 0.665937C4.84438 0.665937 0.664963 4.84536 0.664963 10.0009C0.664963 15.1565 4.84438 19.3359 9.99996 19.3359C15.1555 19.3359 19.335 15.1565 19.335 10.0009C19.335 4.84536 15.1555 0.665937 9.99996 0.665937Z" stroke="#7386AC" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="speakersSwiper__btn  speakersSwiper__btn-next alItem-center jyContent-center">
+                  <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.665 6.05394L14.612 10.0009L10.665 13.9479M5.41404 10.0009L14.601 10.0009M10 0.665937C15.1556 0.665937 19.335 4.84536 19.335 10.0009C19.335 15.1565 15.1556 19.3359 10 19.3359C4.84446 19.3359 0.665039 15.1565 0.665039 10.0009C0.665038 4.84536 4.84446 0.665937 10 0.665937Z" stroke="#7386AC" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div> 
               </div>
-              <div class="swiper__btn swiper__btn-prev jyContent-center alItem-center">
-                <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.33496 6.05394L5.38796 10.0009L9.33496 13.9479M14.586 10.0009L5.39896 10.0009M9.99996 0.665937C4.84438 0.665937 0.664963 4.84536 0.664963 10.0009C0.664963 15.1565 4.84438 19.3359 9.99996 19.3359C15.1555 19.3359 19.335 15.1565 19.335 10.0009C19.335 4.84536 15.1555 0.665937 9.99996 0.665937Z" stroke="#7386AC" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-              </div>      
             </div>
           </div>
           <div class="speakers__btn jyContent-center">
@@ -769,7 +870,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -789,55 +889,60 @@
             </div>
             <div class="body__right">
               <div class="lastPage__img">
-                <img src="./img/lastPage_img.png" alt="">
+                <img src="./img/Frame 290.png" alt="">
               </div>
             </div>
             <div class="effect"></div>
           </div>
-          <footer class="footer">
-            <div class="footer__boxs box jyContent-spacrAd alItem-center">
-              <div class="box__left">
-                <p class="box__address ir__light">
-                  Адрес: г.Ташкент, Учтепинский район, квартал-11, дом 2
-                </p>
-                <a href="" class="box__addressLink ir__regular">
-                  <p>На карте</p>
-                </a>
-              </div>
-            <div class="box__center">
-              <div class="box__logo jyContent-center">
-                <img src="./img/image 4.png" alt="">
-              </div>
-              <p class="box__name ir__light">
-                Психологический центр «Центр тренингов» в Ташкенте
-              </p>
-            </div>
-            <div class="box__right">
-              <div class="box__contacts">
-                <a href="" class="box__callNumber">
-                  <p class="ir__light">(+998)<span class="ir__medium">93 561-62-76</span></p>
-                </a>
-                <div class="box__links">
-                  <a href="">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M14.5862 0H5.41381C2.42858 0 0 2.42858 0 5.41381V14.5863C0 17.5714 2.42858 20 5.41381 20H14.5863C17.5714 20 20 17.5714 20 14.5863V5.41381C20 2.42858 17.5714 0 14.5862 0V0ZM18.8275 14.5863C18.8275 16.9249 16.9249 18.8275 14.5862 18.8275H5.41381C3.0751 18.8275 1.17248 16.9249 1.17248 14.5863V5.41381C1.17248 3.0751 3.0751 1.17248 5.41381 1.17248H14.5863C16.9249 1.17248 18.8275 3.0751 18.8275 5.41381V14.5863Z" fill="black"/>
-                      <path d="M9.99999 4.53125C6.98455 4.53125 4.5314 6.9844 4.5314 9.99984C4.5314 13.0153 6.98455 15.4684 9.99999 15.4684C13.0154 15.4684 15.4686 13.0153 15.4686 9.99984C15.4686 6.9844 13.0154 4.53125 9.99999 4.53125ZM9.99999 14.2959C7.63122 14.2959 5.70389 12.3688 5.70389 9.99984C5.70389 7.63107 7.63122 5.70373 9.99999 5.70373C12.3689 5.70373 14.2961 7.63107 14.2961 9.99984C14.2961 12.3688 12.3689 14.2959 9.99999 14.2959Z" fill="black"/>
-                      <path d="M15.5993 2.58887C14.7082 2.58887 13.9834 3.31381 13.9834 4.20477C13.9834 5.09588 14.7082 5.82082 15.5993 5.82082C16.4904 5.82082 17.2154 5.09588 17.2154 4.20477C17.2154 3.31366 16.4904 2.58887 15.5993 2.58887ZM15.5993 4.64819C15.3549 4.64819 15.1559 4.44921 15.1559 4.20477C15.1559 3.96017 15.3549 3.76135 15.5993 3.76135C15.8439 3.76135 16.0429 3.96017 16.0429 4.20477C16.0429 4.44921 15.8439 4.64819 15.5993 4.64819Z" fill="black"/>
-                      </svg>                    
-                  </a>
-                  <a href="">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19.8289 0.172624C19.6631 0.00684292 19.4144 -0.0441336 19.197 0.0428976L0.368828 7.57407C0.153399 7.66024 0.00914132 7.86539 0.000860091 8.09731C-0.00738208 8.32918 0.121993 8.54407 0.330742 8.64532L7.75526 12.2461L11.3561 19.6707C11.4543 19.8732 11.6594 20.0009 11.8832 20.0009C11.8901 20.0009 11.8971 20.0008 11.9041 20.0005C12.136 19.9923 12.3412 19.848 12.4273 19.6326L19.9586 0.804577C20.0456 0.586921 19.9946 0.338366 19.8289 0.172624ZM2.03539 8.16961L16.9817 2.19114L8.07432 11.0984L2.03539 8.16961ZM11.8318 17.9661L8.90295 11.927L17.8104 3.01973L11.8318 17.9661Z" fill="black"/>
-                      </svg>                    
-                  </a>
-                </div>
-              </div>
-            </div>
-            </div>
-          </footer>
         </div>
       </div>
-    </section> 
+    </section>  
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__boxs box jyContent-spacrAd alItem-center">
+            <div class="box__left">
+              <p class="box__address ir__light">
+                Адрес: г.Ташкент, Учтепинский район, квартал-11, дом 2
+              </p>
+              <a href="" class="box__addressLink ir__regular">
+                <p>На карте</p>
+              </a>
+            </div>
+          <div class="box__center">
+            <div class="box__logo jyContent-center">
+              <img src="./img/image 4.png" alt="">
+            </div>
+            <p class="box__name ir__light">
+              Психологический центр «Центр тренингов» в Ташкенте
+            </p>
+          </div>
+          <div class="box__right">
+            <div class="box__contacts">
+              <a href="" class="box__callNumber">
+                <p class="ir__light">(+998)<span class="ir__medium">93 561-62-76</span></p>
+              </a>
+              <div class="box__links">
+                <a href="">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.5862 0H5.41381C2.42858 0 0 2.42858 0 5.41381V14.5863C0 17.5714 2.42858 20 5.41381 20H14.5863C17.5714 20 20 17.5714 20 14.5863V5.41381C20 2.42858 17.5714 0 14.5862 0V0ZM18.8275 14.5863C18.8275 16.9249 16.9249 18.8275 14.5862 18.8275H5.41381C3.0751 18.8275 1.17248 16.9249 1.17248 14.5863V5.41381C1.17248 3.0751 3.0751 1.17248 5.41381 1.17248H14.5863C16.9249 1.17248 18.8275 3.0751 18.8275 5.41381V14.5863Z" fill="black"/>
+                    <path d="M9.99999 4.53125C6.98455 4.53125 4.5314 6.9844 4.5314 9.99984C4.5314 13.0153 6.98455 15.4684 9.99999 15.4684C13.0154 15.4684 15.4686 13.0153 15.4686 9.99984C15.4686 6.9844 13.0154 4.53125 9.99999 4.53125ZM9.99999 14.2959C7.63122 14.2959 5.70389 12.3688 5.70389 9.99984C5.70389 7.63107 7.63122 5.70373 9.99999 5.70373C12.3689 5.70373 14.2961 7.63107 14.2961 9.99984C14.2961 12.3688 12.3689 14.2959 9.99999 14.2959Z" fill="black"/>
+                    <path d="M15.5993 2.58887C14.7082 2.58887 13.9834 3.31381 13.9834 4.20477C13.9834 5.09588 14.7082 5.82082 15.5993 5.82082C16.4904 5.82082 17.2154 5.09588 17.2154 4.20477C17.2154 3.31366 16.4904 2.58887 15.5993 2.58887ZM15.5993 4.64819C15.3549 4.64819 15.1559 4.44921 15.1559 4.20477C15.1559 3.96017 15.3549 3.76135 15.5993 3.76135C15.8439 3.76135 16.0429 3.96017 16.0429 4.20477C16.0429 4.44921 15.8439 4.64819 15.5993 4.64819Z" fill="black"/>
+                    </svg>                    
+                </a>
+                <a href="">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.8289 0.172624C19.6631 0.00684292 19.4144 -0.0441336 19.197 0.0428976L0.368828 7.57407C0.153399 7.66024 0.00914132 7.86539 0.000860091 8.09731C-0.00738208 8.32918 0.121993 8.54407 0.330742 8.64532L7.75526 12.2461L11.3561 19.6707C11.4543 19.8732 11.6594 20.0009 11.8832 20.0009C11.8901 20.0009 11.8971 20.0008 11.9041 20.0005C12.136 19.9923 12.3412 19.848 12.4273 19.6326L19.9586 0.804577C20.0456 0.586921 19.9946 0.338366 19.8289 0.172624ZM2.03539 8.16961L16.9817 2.19114L8.07432 11.0984L2.03539 8.16961ZM11.8318 17.9661L8.90295 11.927L17.8104 3.01973L11.8318 17.9661Z" fill="black"/>
+                    </svg>                    
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <div id="modal" class="modal jyContent-center alItem-center">
       <div class="modalContent">
@@ -877,9 +982,9 @@
       </div>
     </div>
 
-  <script src="./js/index.js"></script>
-  <script src="./js/video.js"></script>
+    <script src="./js/index.js"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="./js/video.js"></script>
   <script src="./js/swiper.js"></script>
 </body>
 </html>
