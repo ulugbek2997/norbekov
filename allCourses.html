@@ -9,175 +9,193 @@
 </head>
 <body>
 
-  <div class="container">
-    <div class="allCourses">
-      <header class="header d-flex alItem-center jyContent-spaceBn">    
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
         <div class="header__left d-flex alItem-center">
           <div class="header__logo">
-            <img src="./img/image 4.png" alt="">
+            <img src="./img/image 4.png" alt="">  
           </div>
+          <div class="burger" onclick="burgerMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+        <div class="header__right rightBox jyContent-spaceBn alItem-center">
           <nav class="header__navbar navbar">
             <ul class="navbar__items d-flex">
-              <li class="navbar__item ir__regular"><a href="./index.html">Главная</a></li>
-              <li class="navbar__item ir__regular"><a href="#ourCourses">Курсы</a></li>
-              <li class="navbar__item ir__regular"><a href="#schedule">Расписания</a></li>
-              <li class="navbar__item ir__regular"><a href="./cantact.html">Контакты</a></li>
+              <li class="navbar__item "><a class="ir__regular" href="./index.html">Главная</a></li>
+              <li class="navbar__item "><a class="ir__regular" href="./allCourses.html">Курсы</a></li>
+              <li class="navbar__item "><a class="ir__regular" href="./allSchedule.html">Расписания</a></li>
+              <li class="navbar__item "><a class="ir__regular" href="./cantact.html">Контакты</a></li>
             </ul>
           </nav>
-        </div>
-        <div class="header__rightBox rightBox d-flex">
-          <ul class="rightBox__lang d-flex">
-            <li><a class="ir__regular" href="">Ру</a></li>
-            <li><a href="">/</a></li>
-            <li><a class="ir__regular" href="">O’z</a></li>
-          </ul>
-          <div class="rightBox__contact">
-            <p class="ir__regular">(+998)93 561-62-76</p>
-            <a class="ir__regular" href="">Заказать звонок</a>
+          <div class="rightBox__main d-flex">
+            <ul class="rightBox__lang d-flex alItem-center">
+              <li><a class="ir__regular" href="">Ру</a></li>
+              <li>/</li>
+              <li><a class="ir__regular" href="">O’z</a></li>
+            </ul>
+            <div class="rightBox__contact">
+              <p class="ir__regular">(+998)93 561-62-76</p>
+              <a class="ir__regular" href="">Заказать звонок</a>
+            </div>
           </div>
         </div>
-      </header>
-
-      <div class="allCourses__titleBox titleBox jyContent-spaceBn alItem-center">
-        <div class="titleBox__left">
-          <h2 class="mt__semiBold">Все курсы</h2>
-          <p class="ir__regular">Главная / <span>Все курсы</span></p>
-        </div>
-        <button class="titleBox__right btn btn__blue">
-            <p class="ir__medium">Получить консультацию</p>
-            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4.60902 11.8203V2.72234C4.60902 1.71734 5.42402 0.902344 6.42902 0.902344C7.43402 0.902344 8.24902 1.71734 8.24902 2.72234V6.36134L14.238 7.69834C15.64 7.97834 16.65 9.21034 16.65 10.6403V14.3343C16.65 15.0743 16.478 15.8033 16.147 16.4653C15.34 18.0793 13.69 19.0993 11.885 19.0993H9.00702C6.71502 19.0993 4.56902 17.9773 3.26002 16.0963L2.15202 14.5043C1.63502 13.9493 1.34802 13.2193 1.34802 12.4603V9.40934" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-        </button>
       </div>
+    </div>
 
-      <main>
-        <div class="allCourses__cards d-flex">
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/card.png" alt="">
-            </div>
-            <div class="card__body">
-              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
-              <a href="" class="d-flex alItem-center">
-                <p class="ir__regular">Подробнее</p> 
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                 </a>
-            </div>
+  </header>
+
+  <main class="allCourses">
+    <div class="container">
+      <div class="allCourses__inner">
+
+        <div class="allCourses__titleBox titleBox jyContent-spaceBn alItem-center">
+          <div class="titleBox__left">
+            <h2 class="mt__semiBold">Все курсы</h2>
+            <p class="ir__regular">Главная / <span>Все курсы</span></p>
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/card.png" alt="">
-            </div>
-            <div class="card__body">
-              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
-              <a href="" class="d-flex alItem-center">
-                <p class="ir__regular">Подробнее</p> 
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <button class="titleBox__right btn btn__blue">
+              <p class="ir__medium">Получить консультацию</p>
+              <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.60902 11.8203V2.72234C4.60902 1.71734 5.42402 0.902344 6.42902 0.902344C7.43402 0.902344 8.24902 1.71734 8.24902 2.72234V6.36134L14.238 7.69834C15.64 7.97834 16.65 9.21034 16.65 10.6403V14.3343C16.65 15.0743 16.478 15.8033 16.147 16.4653C15.34 18.0793 13.69 19.0993 11.885 19.0993H9.00702C6.71502 19.0993 4.56902 17.9773 3.26002 16.0963L2.15202 14.5043C1.63502 13.9493 1.34802 13.2193 1.34802 12.4603V9.40934" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                 </a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/card.png" alt="">
-            </div>
-            <div class="card__body">
-              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
-              <a href="" class="d-flex alItem-center">
-                <p class="ir__regular">Подробнее</p> 
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                 </a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/card.png" alt="">
-            </div>
-            <div class="card__body">
-              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
-              <a href="" class="d-flex alItem-center">
-                <p class="ir__regular">Подробнее</p> 
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                 </a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/card.png" alt="">
-            </div>
-            <div class="card__body">
-              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
-              <a href="" class="d-flex alItem-center">
-                <p class="ir__regular">Подробнее</p> 
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                 </a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/card.png" alt="">
-            </div>
-            <div class="card__body">
-              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
-              <a href="" class="d-flex alItem-center">
-                <p class="ir__regular">Подробнее</p> 
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                 </a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/card.png" alt="">
-            </div>
-            <div class="card__body">
-              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
-              <a href="" class="d-flex alItem-center">
-                <p class="ir__regular">Подробнее</p> 
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                 </a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/card.png" alt="">
-            </div>
-            <div class="card__body">
-              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
-              <a href="" class="d-flex alItem-center">
-                <p class="ir__regular">Подробнее</p> 
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                 </a>
-            </div>
-          </div>
-        </div>
-        <div class="allCourses__mainBtn jyContent-center">
-          <button class="btn btn__light">
-            <p class="ir__medium">Показать ещё</p>
-             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.946 11.665L10.999 15.612L7.052 11.665M10.999 6.41404V15.601M20.334 11C20.334 16.1556 16.1546 20.335 10.999 20.335C5.84342 20.335 1.664 16.1556 1.664 11C1.664 5.84446 5.84342 1.66504 10.999 1.66504C16.1546 1.66504 20.334 5.84446 20.334 11Z" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg> 
           </button>
         </div>
-      </main>
 
-      <footer class="footer">
-        <div class="footer__boxs box jyContent-spacrAd alItem-center">
+        <div class="allCourses__main fx-wrap">
+          <div class="card">
+            <div class="card__img">
+              <img src="./img/card.png" alt="">
+            </div>
+            <div class="card__body">
+              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
+              <a href="" class="d-flex alItem-center">
+                <p class="ir__regular">Подробнее</p> 
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                 </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <img src="./img/card.png" alt="">
+            </div>
+            <div class="card__body">
+              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
+              <a href="" class="d-flex alItem-center">
+                <p class="ir__regular">Подробнее</p> 
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                 </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <img src="./img/card.png" alt="">
+            </div>
+            <div class="card__body">
+              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
+              <a href="" class="d-flex alItem-center">
+                <p class="ir__regular">Подробнее</p> 
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                 </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <img src="./img/card.png" alt="">
+            </div>
+            <div class="card__body">
+              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
+              <a href="" class="d-flex alItem-center">
+                <p class="ir__regular">Подробнее</p> 
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                 </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <img src="./img/card.png" alt="">
+            </div>
+            <div class="card__body">
+              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
+              <a href="" class="d-flex alItem-center">
+                <p class="ir__regular">Подробнее</p> 
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                 </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <img src="./img/card.png" alt="">
+            </div>
+            <div class="card__body">
+              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
+              <a href="" class="d-flex alItem-center">
+                <p class="ir__regular">Подробнее</p> 
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                 </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <img src="./img/card.png" alt="">
+            </div>
+            <div class="card__body">
+              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
+              <a href="" class="d-flex alItem-center">
+                <p class="ir__regular">Подробнее</p> 
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                 </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <img src="./img/card.png" alt="">
+            </div>
+            <div class="card__body">
+              <h4 class="card__title ir__semiBold">Индивидуальная консультация</h4>
+              <a href="" class="d-flex alItem-center">
+                <p class="ir__regular">Подробнее</p> 
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.6639 6.05304L14.6109 10L10.6639 13.947M5.41294 10H14.5989M19.3339 10C19.3339 15.1556 15.1545 19.335 9.99894 19.335C4.84336 19.335 0.66394 15.1556 0.66394 10C0.66394 4.84446 4.84336 0.665039 9.99894 0.665039C15.1545 0.665039 19.3339 4.84446 19.3339 10Z" stroke="#0057FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                 </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="allCourses__btn jyContent-center">
+          <button class="btn btn__light d-flex">
+            <p class="ir__medium">Показать ещё</p>
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.9461 11.665L10.9991 15.612L7.05206 11.665M10.9991 6.41404V15.601M20.3341 11C20.3341 16.1556 16.1546 20.335 10.9991 20.335C5.84348 20.335 1.66406 16.1556 1.66406 11C1.66406 5.84446 5.84348 1.66504 10.9991 1.66504C16.1546 1.66504 20.3341 5.84446 20.3341 11Z" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__boxs box jyContent-spaceBn ">
           <div class="box__left">
             <p class="box__address ir__light">
               Адрес: г.Ташкент, Учтепинский район, квартал-11, дом 2
@@ -214,11 +232,16 @@
               </a>
             </div>
           </div>
+          <div class="box__dev d-flex ">
+            <span class="ir__light">Сайт разработал</span>
+            <p class="ir__medium">SPACEMOS</p>
+          </div>
         </div>
         </div>
-      </footer>
+      </div>
     </div>
-  </div>
-  
+  </footer> 
+
+  <script src="./js/index.js"></script>
 </body>
 </html>
