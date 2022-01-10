@@ -17,7 +17,7 @@ closeBtn2.addEventListener('click', closeModal);
 let modalBtns = document.querySelectorAll('.modalBtn');
 
 
-let headerRight = document.getElementsByClassName('header__right');
+let headerRight = document.querySelector('.rightBox');
 
 function burgerMenu(x) {
   console.log(headerRight);

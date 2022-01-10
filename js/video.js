@@ -1,7 +1,9 @@
 let tag = document.createElement('script');
 
 const playerBtn = document.getElementById('playerBtn');
+const videoCover = document.querySelector('.author__videoCover');
 playerBtn.addEventListener('click', playVideo);
+
 
 
 
@@ -17,7 +19,6 @@ function onYouTubeIframeAPIReady() {
     videoId: 'LNkK39xsQe4',
     events: {
       'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
     }
   });
 }
@@ -28,18 +29,13 @@ function onPlayerReady(event) {
 }
 
 function playVideo(){
+  playerBtn.classList.add('opacityEffect');
+  videoCover.classList.add('opacityEffect');
   player.playVideo();
-  playerBtn.classList.add('playerBtnEffect');
-}
-
-let done = false;
-function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 6000);
-    done = true;
-  }
 }
 
 function stopVideo() {
   player.stopVideo();
 }
+
+

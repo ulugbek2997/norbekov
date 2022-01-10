@@ -79,22 +79,6 @@
     margin-left: calc(50% - 182px);
   } 
 
-  .lastPage .body{
-
-    &__left{
-      position: absolute;
-      z-index: 10;
-      bottom: 0;
-    }
-
-    &__right{
-      position: absolute;
-      right: 0;
-      bottom: 0;
-    }
-  }
-
-
   .footer__boxs{
     justify-content: space-between;
   }
@@ -121,6 +105,7 @@
     &__right{
       display: none;
       padding-top: 30px;
+      transition: 2s;
     }
   }
 
@@ -173,7 +158,52 @@
   }
 
   .lastPage{
-    padding-top: 0;
+
+    &__inner{
+      height: max-content;
+    }
+
+    &__body{
+      height: max-content;
+    }
+
+    &__logo{
+      display: none;
+    }
+
+    &__img{
+      position: static;
+      width: 100%;
+      height: 100%;
+
+      img{
+        object-fit: contain;
+      }
+    }
+
+    .effect{
+      z-index: 8;
+    }
+  }
+
+  .lastPage .body{
+    width: 100%;
+    height: 520px;
+
+    &__left{
+      position: absolute;
+      width: 70%;
+      z-index: 10;
+      bottom: 42px;
+    }
+
+    &__right{
+      width: 100%;
+      height: 100%;
+      right: 0;
+      bottom: 0;
+      z-index: 7;
+    }
   }
 
   .modalContent {
@@ -181,6 +211,8 @@
   }
 
 }
+
+
 
 @media only screen and (max-width: 675px) {
 
@@ -251,6 +283,13 @@
 
   .author__video {
     height: 350px;
+  }
+
+  .author__videoCover{
+    height: 100%;
+    img{
+      height: 100%
+    }
   }
 
   .author .body {
@@ -502,9 +541,59 @@
   }
  }
 
+ .lastPage .body{
+   &__left{
+     width: 100%;
+   }
+ }
+
 }
 
 @media only screen and (max-width: 580px){
+
+
+  .header{
+    &__inner{
+      display: block;
+    }
+
+    &__left{
+      justify-content: space-between;
+    }
+
+    &__right{
+      display: none;
+      padding-top: 30px;
+      transition: 2s;
+    }
+  }
+
+  .navbar{
+    &__items{
+
+      li~li{
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .header__right .rightBox{
+    &__main{
+      display: block;
+    }
+
+    &__lang{
+      margin-top: 20px;
+    }
+
+    &__contact{
+      text-align: start ;
+      margin-top: 20px;
+    }
+  }
+
+
+
   .footer__boxs{
        display: block;    
   }
@@ -574,6 +663,21 @@
     }
   
      
+   }
+
+   .lastPage {
+     
+    &__title{
+      width: 70%;
+    }
+
+    &__subtitle{
+      width: 50%;
+    }
+
+    &__btn{
+      margin-left: 30%;
+    }
    }
 }
 
@@ -720,6 +824,12 @@
     &__body{
       margin-top: 30px;
     }
+
+    &__btn{
+      button{
+        align-items: center;
+      }
+    }
   }
 
   .info__inner{
@@ -783,21 +893,30 @@
 
  .lastPage {
 
-  &__body{
-    height: 350px;
-  }
     &__title {
    font-size: 18px;
    line-height: 22px;
    }
 
    &__subtitle{
+     width: 70%;
      margin-top: 5px;
    }
 
+   &__img{
+     height: max-content;
+     position: absolute;
+
+     img{
+       object-fit: contain;
+     }
+   }
+
+
    &__btn{
-    width: 50%;
+    width: 60%;
     margin-top: 5px;
+    margin-left: 20%;
     p{
       font-size: 13px;
       line-height: 18px;
@@ -809,9 +928,13 @@
    }
  }
 
- .lastPage .footer .box__address {
-  font-size: 18px;
-  line-height: 22px;
+ .lastPage .body{
+
+  height: 300px;
+
+   &__left{
+     bottom: 0;
+   }
  }
 
  .modalContent {
@@ -828,6 +951,11 @@
   }
  }
 
+}
+
+.activeBlock{
+  display:block;
+  transition: 2s;
 }
 
 @media only screen and (max-width: 320px){
