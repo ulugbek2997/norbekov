@@ -27,19 +27,21 @@
           <nav class="header__navbar navbar">
             <ul class="navbar__items d-flex">
               <li class="navbar__item "><a class="ir__regular" href="./index.html">Главная</a></li>
-              <li class="navbar__item "><a class="ir__regular" href="#ourCourses">Курсы</a></li>
-              <li class="navbar__item "><a class="ir__regular" href="#schedule">Расписания</a></li>
+              <li class="navbar__item "><a class="ir__regular" href="./allCourses.html">Курсы</a></li>
+              <li class="navbar__item "><a class="ir__regular" href="./allSchedule.html">Расписания</a></li>
               <li class="navbar__item "><a class="ir__regular" href="./cantact.html">Контакты</a></li>
             </ul>
           </nav>
           <div class="rightBox__main d-flex">
             <ul class="rightBox__lang d-flex alItem-center">
-              <li><a class="ir__regular" href="">Ру</a></li>
+              <li><a class="ir__regular langActive" href="">Ру</a></li>
               <li>/</li>
               <li><a class="ir__regular" href="">O’z</a></li>
             </ul>
             <div class="rightBox__contact">
-              <p class="ir__regular">(+998)93 561-62-76</p>
+              <a href="tel:+99893 561-62-76">
+                <p  class="ir__regular">(+998)93 561-62-76</p>
+              </a>
               <a class="ir__regular" href="">Заказать звонок</a>
             </div>
           </div>
@@ -64,8 +66,8 @@
                   </svg>
                </button>
           </div>
-          <div class="course__body d-flex">
 
+          <div class="course__body d-flex">
             <div class="course__left left">
               <div class="left__img1">
                 <img src="./img/card.png" alt="">
@@ -101,7 +103,7 @@
                   </div>
                   <div class="spekaerBlock__speaker">
                     <div class="spekaerBlock__speaker-img">
-                      <img src="./img/speaker.png" alt="">
+                      <img src="./img/Frame 290.png" alt="">
                     </div>
                     <h4 class="spekaerBlock__speaker-name  ir__semiBold">
                       Икромов Азиз
@@ -113,17 +115,19 @@
                 </div>
               </div>
 
-              <div class="left__form form">
-                <h2 class="form__title mt__semiBold">
+              <div class="course__form">
+
+                <h2 class="course__formTitle mt__semiBold">
                   Получите консультацию от наших экспертов
                 </h2>
-                <p class="form__subtitle ir__light">
+                <p class="course__formSubtitle ir__light">
                   Оставте ваши данные и наши эксперты свяжуться с вами.
                 </p>
+
                 <form action="">
-                  <div class="form__inputs">
-                    <input type="text" placeholder="*Ваше имя" class="form__input-name ir__light">
-                    <input type="text" placeholder="*Номер телефона" class="form__input-number ir__light">
+                  <div class="course__formInputs">
+                    <input type="text" placeholder="*Ваше имя" class="course__formInput-name ir__light">
+                    <input type="text" placeholder="*Номер телефона" class="course__formInput-number ir__light">
                   </div>
                   <div class="left__btn jyContent-center">
                     <a href="" class="btn btn__blue">
@@ -370,5 +374,6 @@
     </footer>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

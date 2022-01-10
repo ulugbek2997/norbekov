@@ -105,7 +105,30 @@
     &__right{
       display: none;
       padding-top: 30px;
-      transition: 2s;
+    }
+  }
+
+  .navbar{
+    &__items{
+
+      li~li{
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .header__right .rightBox{
+    &__main{
+      display: block;
+    }
+
+    &__lang{
+      margin-top: 20px;
+    }
+
+    &__contact{
+      text-align: start ;
+      margin-top: 20px;
     }
   }
 
@@ -210,9 +233,82 @@
     width: 80%;
   }
 
+  .allCourses .card{
+    width: calc(100% / 3 - 12px );
+  }
+  // allSchoodel
+  .allSchedule .titleBox{
+    
+    &__left{
+
+      h2{
+        font-size: 28px;
+        line-height: 34px;
+      }
+    }
+  }
+
+  .allSchedule .card{
+    width: 100%;
+  }
+  // course
+  .course .titleBox{
+    display: block;
+    padding: 20px;
+    height: max-content;
+
+    &__right{
+      margin-top: 20px;
+    }
+
+    &__left{
+      h2{
+        width: 100%;
+      }
+    }
+  }
+
+  .course{
+    &__body{
+      display: block;
+      margin-top: 30px;
+    }
+
+    &__left{
+      width: 100%;
+    }
+
+    &__right{
+      width: 100%;
+    }
+  }
+
+  .courseSwiper {
+
+    &__btn{
+      display: none;
+    }
+  }
+  .course .course__left .left__form{
+    height: max-content;
+    padding-bottom: 30px;
+  }
+
+  .newsPage{
+
+    &__body{
+      display: block;
+    }
+
+    &__left{
+      width: 100%;
+    }
+  }
+
+  .newsPage .card{
+    width: 40%;
+  }
 }
-
-
 
 @media only screen and (max-width: 675px) {
 
@@ -277,6 +373,54 @@
       object-fit: cover;
     }
   }
+
+  // allNews
+  .allNews .card{
+    width: calc(100% / 2 - 16px );
+  }
+
+  // cours
+  .course{
+
+    &__form{
+      height: max-content;
+      padding-bottom: 30px;
+    }
+
+    &__formTitle{
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    &__formSubtitle{
+      font-size: 18px;
+      line-height: 22px;
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    &__formInputs{
+      margin-top: 30px;
+      display: block;
+    }
+
+    &__formInput-name{
+      width: 70%;
+      margin-left: 15%;
+      border-radius: 50px;
+    }
+
+    &__formInput-number{
+      width: 70%;
+      margin-left: 15%;
+      border-radius: 50px;
+      margin-top: 15px;
+    }
+
+
+  }
+
+
 }
 
 @media only screen and (max-width: 640px) {
@@ -547,6 +691,40 @@
    }
  }
 
+ .allCourses__titleBox{
+   display: block;
+   height: max-content;
+   padding: 20px 35px;
+
+   button{
+     margin-top: 30px;
+   }
+ }
+
+ .allCourses .card{
+  width: calc(100% / 2 - 16px );
+}
+
+ .allSchedule .titleBox{
+   display: block;
+   padding: 20px;
+   height: max-content;
+
+   &__right{
+     margin-top: 20px;
+   }
+ }
+
+ .allSchedule .card{
+
+  &__date{
+    width: 90%;
+  }
+
+  &__text{
+    width: 100%;
+  }
+ }
 }
 
 @media only screen and (max-width: 580px){
@@ -591,8 +769,6 @@
       margin-top: 20px;
     }
   }
-
-
 
   .footer__boxs{
        display: block;    
@@ -679,6 +855,67 @@
       margin-left: 30%;
     }
    }
+
+   .allCourses .titleBox{
+      
+    &__left{
+      width: 100%;
+      }
+
+      &__right{
+        width: 80%;
+        margin-left: 10%;
+        column-gap: 5px;
+
+        p{
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+   }
+
+  //allNews    
+  .allNews .card{
+    width: 100%;
+  }
+
+  .allNews .titleBox{
+    height: max-content;
+    padding: 20px;
+    &__left{
+      h2{
+        font-size: 28px;
+        line-height: 28px;
+      }
+
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+
+  .newsPage .titleBox{
+    padding: 20px;
+    width: 80%;
+
+
+    &__left{
+      h2{
+        font-size: 30px;
+        line-height: 34px;
+      }
+
+      p{
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .newsPage .card{
+    width: 100%;
+  }
+
 }
 
 @media only screen and (max-width: 420px) {
@@ -950,6 +1187,122 @@
     margin-top: 10px;
   }
  }
+ 
+ .allCourses .titleBox{
+   padding: 20px 10px;
+
+  &__left{
+    h2{
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    p{
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__right{
+    width: 90%;
+    margin-left: 5%;
+    padding: 10px;
+  }
+ }
+
+ .allSchedule .titleBox{
+   &__left{
+     h2{
+       font-size: 22px;
+       line-height: 28px;
+     }
+
+     p{
+       font-size: 14px;
+       line-height: 16px;
+     }
+   }
+
+   &__right{
+     width: 100%;
+     padding: 10px;
+     column-gap: 5px;
+     p{
+       font-size: 14px;
+     }
+   }
+ }
+
+ .allSchedule .card{
+  width: 100%;
+  padding: 20px;
+  flex-direction: column;
+
+  &__img{
+    order: 1;
+    width: 100%;
+  }
+
+  &__body{
+    width: 100%;
+    order: 2;
+  }
+
+  &__text{
+    font-size: 14px;
+  }
+
+  &__date, &__link, &__text{
+    width: 100%;
+  }
+}
+
+.course{
+
+  &__formTitle{
+    width: 80%;
+    margin-left: 10%;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  &__formSubtitle{
+    width: 90%;
+    margin-left: 5%;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__formInputs{
+    margin-top: 20px;
+  }
+
+}
+
+.course .titleBox{
+
+  &__left{
+    h2{
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+}
+
+.course__speakers .spekaerBlock{
+  
+  &__body{
+    display: block;
+  }
+
+  &__speaker-img{
+    
+    img{
+      margin-left: calc(100% - 100px);
+    }
+  }
+
+}
 
 }
 

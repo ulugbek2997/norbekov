@@ -1410,8 +1410,8 @@ html{
 .allCourses .titleBox{
 
   &__left{
+    width: 60%;
   h2{
-    width: 770px;
     font-size: 40px;
     line-height: 50px;    
   }  
@@ -1557,6 +1557,66 @@ html{
   &__speakers{
     margin-top: 50px;
   }
+
+  &__form{
+    width: 100%;
+    height: 410px;
+    background-color: #E5F5FC;
+    border-radius: 10px;
+    margin-top: 50px;
+  }
+
+  &__formTitle{
+    width: 76%;
+    margin-left:  12%;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  &__formSubtitle{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &__formInputs{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+  }
+
+  &__formInput-name{
+    padding: 15px 0 15px 30px;
+    height: 54px;
+    width: 40%;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 30px 0 0 30px;
+  }
+
+  &__formInput-number{
+    padding: 15px 0 15px 30px;
+    height: 54px;
+    width: 40%;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 0 30px 30px 0;
+    padding: 15px 0 15px 30px;
+    height: 54px;
+    width: 40%;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 0 30px 30px 0;
+    border-left: solid 1px black  0.3;
+  }
+
 }
 
 .course .titleBox{
@@ -1674,14 +1734,6 @@ html{
     margin-top: 30px;
   }
 
-  &__form{
-    width: 100%;
-    height: 410px;
-    background-color: #E5F5FC;
-    border-radius: 10px;
-    margin-top: 50px;
-  }
-
   &__btn{
     margin-top: 30px;
 
@@ -1723,6 +1775,7 @@ html{
     img{
       width: 100%;
       height: 100%;
+      border-radius: 200px;
       object-fit: cover;
     }
   }
@@ -1740,60 +1793,6 @@ html{
     font-size: 15px;
     line-height: 18px;
     color: #545454;
-  }
-}
-
-.course__left .left__form .form{
-  
-  &__title{
-    width: 76%;
-    margin-left:  12%;
-    padding-top: 50px;
-    text-align: center;
-    font-size: 40px;
-    line-height: 50px;
-  }
-
-  &__subtitle{
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 18px;
-    line-height: 25px;
-  }
-
-  &__inputs{
-    display: flex;
-    justify-content: center;
-    margin-top: 45px;
-  }
-
-  &__input-name{
-    padding: 15px 0 15px 30px;
-    height: 54px;
-    width: 40%;
-    background-color: white;
-    border: none;
-    outline: none;
-    border-radius: 30px 0 0 30px;
-  }
-
-  &__input-number{
-    padding: 15px 0 15px 30px;
-    height: 54px;
-    width: 40%;
-    background-color: white;
-    border: none;
-    outline: none;
-    border-radius: 0 30px 30px 0;
-    padding: 15px 0 15px 30px;
-    height: 54px;
-    width: 40%;
-    background-color: white;
-    border: none;
-    outline: none;
-    border-radius: 0 30px 30px 0;
-    border-left: solid 1px black  0.3;
   }
 }
 
@@ -1903,39 +1902,7 @@ html{
       column-gap: 10px;
       margin-top: 20px;
     }
-
-    &::after{
-      content: "";
-      position: absolute;
-      height: 393px;
-      width: 393px;
-      left: -380px;
-      top: 128px;
-      border-radius: 200px;
-      background: #0057FF;
-      opacity: 0.4;
-      z-index: 2;
-      top: 0;
-      transition: 2s;
-    }
-  }
-
-  &__body:hover ,
-  &__body:hover a p,
-  &__body:hover a path
-  {
-    display: block;
-    color: white;
-    stroke:white;
-    transition: 2s;
-  }
-
-  &__body:hover{
-    &::after {
-      left: -110px;
-      z-index: -1;
-    }   
-  }
+ }
 }
 
 // allNews
@@ -1986,7 +1953,6 @@ html{
 
   &__left{
     h2{
-      width: 770px;
       font-size: 40px;
       line-height: 50px;
     }
@@ -2038,21 +2004,17 @@ html{
       z-index: 2;
     }
   }
+
+  &__title{
+    width: 70%;
+  }
   
   &__body{
     // position: relative;
     padding: 10px 20px 15px 20px ;
 
-
-    h4{
-      font-size: 18px;
-      line-height: 28px;
-      width: 60%;
-    }
-
     p{
-      font-size: 15px;
-      color: $textColor2;
+      font-size: 14px;
     }
 
     a{
@@ -2077,6 +2039,12 @@ html{
   &__date{
     color: #000000;
     opacity: 0.56;
+  }
+
+  &__main{
+    a{
+        color: $textColor2;
+    }
   }
 
   &__body:hover ,
@@ -2136,6 +2104,7 @@ html{
       background: #FFFFFF;
       box-shadow: 0px 8px 20px rgba(74, 156, 107, 0.05);
       border-radius: 50px;
+      cursor: pointer;
 
       p{
         font-size: 18px;
@@ -2150,7 +2119,6 @@ html{
 
   &__left{
     h2{
-      width: 770px;
       font-size: 40px;
       line-height: 50px;
     }
@@ -2290,7 +2258,6 @@ html{
 
   &__left{
     h2{
-      width: 770px;
       font-size: 40px;
       line-height: 50px;
     }
@@ -2518,6 +2485,10 @@ html{
  transition: 2s;
  opacity: 0;
  z-index: -10;
+}
+
+.langActive{
+  color: $textColor2
 }
 
 

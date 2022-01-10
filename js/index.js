@@ -11,8 +11,8 @@ const mindBtn =document.getElementById('mindBtn');
 const soulsBtn =document.getElementById('soulsBtn');
 const spiritBtn =document.getElementById('spiritBtn');
  
-closeBtn.addEventListener('click', closeModal);
-closeBtn2.addEventListener('click', closeModal);
+// closeBtn.addEventListener('click', closeModal);
+// closeBtn2.addEventListener('click', closeModal);
 
 let modalBtns = document.querySelectorAll('.modalBtn');
 
@@ -20,7 +20,6 @@ let modalBtns = document.querySelectorAll('.modalBtn');
 let headerRight = document.querySelector('.rightBox');
 
 function burgerMenu(x) {
-  console.log(headerRight);
   x.classList.toggle("change");
   headerRight.classList.toggle('activeBlock');
 }

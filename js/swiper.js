@@ -133,7 +133,7 @@ let courseSwiper = new Swiper('.courseSwiper', {
       slidesPerView: 2,
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 2,
     },
     1050: {
       slidesPerView: 4,
