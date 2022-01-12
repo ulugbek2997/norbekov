@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./style/style.css">
   <title>Norbekov.uz</title>
 </head>
@@ -15,7 +16,7 @@
       <div class="header__inner">
         <div class="header__left d-flex alItem-center">
           <div class="header__logo">
-            <img src="./img/image 4.png" alt="">  
+            <img src="./img/logo.png" alt="">  
           </div>
           <div class="burger" onclick="burgerMenu(this)">
             <div class="bar1"></div>
@@ -42,7 +43,7 @@
               <a href="tel:+99893 561-62-76">
                 <p  class="ir__regular">(+998)93 561-62-76</p>
               </a>
-              <a class="ir__regular" href="">Заказать звонок</a>
+              <span class="ir__regular modalBtn" href="">Заказать звонок</span>
             </div>
           </div>
         </div>
@@ -747,7 +748,7 @@
         <div class="news__inner">
           <div class="news__title jyContent-spaceBn alItem-center">
             <h1 class="mt__semiBold">Блог/Новости</h1>
-            <a href="" class="ir__medium">Все новости</a>
+            <a href="./allNews.html" class="ir__medium">Все новости</a>
           </div>
           <div class="news__card card jyContent-spaceBn">
             <div class="card__img">
@@ -774,9 +775,9 @@
                             </svg>
                          </div>
                        </div>
-                       <p class="slide2__text ir__semiBold">
-                        Koronavirus borligini ko‘rsatuvchi himoya niqobi ishlab chiqildi
-                       </p>
+                       <a class="slide2__text ir__semiBold">
+                        <p>Koronavirus borligini ko‘rsatuvchi himoya niqobi ishlab chiqildi</p>
+                       </a>
                    </div> 
                   </div>
                 <div class="swiper-slide">
@@ -899,7 +900,7 @@
               </div>
 
               <div class="lastPage__logo">
-                <img src="./img/image 4.png" alt="">
+                <img src="./img/logo.png" alt="">
               </div>
             </div>
 
@@ -963,7 +964,7 @@
       <div class="container">
         <div class="modalContent">
         <div class="modalContent__btn-close">
-          <button id="closeBtn">
+          <button class="modalCloseBtn">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.889587 0.845825L23.1104 23.0625M0.889587 23.0625L23.1104 0.845825" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -988,7 +989,7 @@
         </div>
       </form>
         <div class="modalContent__btn-close2 jyContent-center alItem-center">
-          <button id="closeBtn2" class="d-flex alItem-center">
+          <button  class="modalCloseBtn d-flex alItem-center">
             <p>Закрыть</p>
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.889587 0.845825L23.1104 23.0625M0.889587 23.0625L23.1104 0.845825" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>

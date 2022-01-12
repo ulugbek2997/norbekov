@@ -17,9 +17,7 @@ function onYouTubeIframeAPIReady() {
     height: '360',
     width: '640',
     videoId: 'LNkK39xsQe4',
-    events: {
-      'onReady': onPlayerReady,
-    }
+    autoplay:0,
   });
 }
 

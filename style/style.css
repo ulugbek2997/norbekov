@@ -209,6 +209,16 @@ html {
      -moz-column-gap: 30px;
           column-gap: 30px;
 }
+.header__logo {
+  width: 111px;
+  height: 82px;
+}
+.header__logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
 .header__right .rightBox__main {
   -webkit-column-gap: 30px;
@@ -231,14 +241,12 @@ html {
   font-size: 18px;
   line-height: 22px;
 }
-.header__right .rightBox__contact a {
+.header__right .rightBox__contact span {
+  font-size: 18px;
+  line-height: 18px;
   color: #0057FF;
   border-bottom: solid 1px #0057FF;
-}
-.header__right .rightBox__contact a p:last-child {
-  font-size: 15px;
-  line-height: 18px;
-  color: black;
+  cursor: pointer;
 }
 
 .burger {
@@ -620,15 +628,15 @@ html {
   opacity: 0.4;
   z-index: 2;
   top: 0;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .ourCourses .card__body:hover, .ourCourses .card__body:hover a p, .ourCourses .card__body:hover a path {
   display: block;
   color: white;
   stroke: white;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .ourCourses .card__body:hover::after {
   left: -110px;
@@ -636,7 +644,9 @@ html {
 }
 
 .schedule .container {
-  background: url("../img/Frame 265.jpg");
+  background: url("../img/fonSchoodel.png");
+  background-size: cover;
+  background-position: top;
 }
 .schedule__inner {
   width: 85%;
@@ -1072,7 +1082,6 @@ html {
 .news__slider .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1126,13 +1135,17 @@ html {
       -ms-flex-align: center;
           align-items: center;
 }
-.slide2__text {
+.slide2__text p {
   font-size: 15px;
   line-height: 22px;
   text-align: start;
   cursor: pointer;
 }
-.slide2__text:hover {
+.slide2:hover {
+  background-color: white;
+}
+
+.slide2:hover .slide2__text {
   color: #0057FF;
 }
 
@@ -1262,6 +1275,7 @@ html {
 
 .contact__inner {
   width: 85%;
+  padding-bottom: 40px;
 }
 .contact__inner iframe {
   width: 100%;
@@ -1272,99 +1286,115 @@ html {
   line-height: 50px;
   padding-bottom: 35px;
 }
-
-.contact .header {
-  padding: 20px 0;
-}
-
-.contact .header .rightBox__number a {
-  -webkit-column-gap: 5px;
-     -moz-column-gap: 5px;
-          column-gap: 5px;
-  cursor: pointer;
-}
-.contact .header .rightBox__number a p {
-  color: black;
-}
-.contact .header .rightBox__number a span {
-  color: #0057FF;
-}
-
-.cantact__body {
-  height: calc(-webkit-max-content + 100px);
-  height: calc(-moz-max-content + 100px);
-  height: calc(max-content + 100px);
-}
-
-.cantact__body .left {
-  padding: 40px;
-}
-.cantact__body .left__logo {
-  width: 142px;
-  height: 36px;
-}
-.cantact__body .left__logo img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.cantact__body .left__contact {
-  margin: 50px 0;
-}
-.cantact__body .left__contact p {
-  font-size: 18px;
-  line-height: 22px;
-}
-.cantact__body .left__contact p span {
-  color: #0057FF;
-}
-.cantact__body .left__address {
-  padding-bottom: 20px;
-  width: 283px;
-}
-.cantact__body .left__link {
-  font-size: 15px;
-  line-height: 19px;
-  color: #0057FF;
-}
-.cantact__body .left__icons {
-  margin-top: 20px;
-}
-.cantact__body .left__icons:last-child {
-  margin-left: 15px;
-}
-
-.cantact__body .right {
-  padding: 0 0 0 40px;
+.contact__right {
   background-color: #EEF8FF;
+  padding: 0 0 0 40px;
+  width: 100%;
 }
-.cantact__body .right__title {
+.contact__main {
+  background-image: url(../img/cantactPage_img.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.contact__main-title {
+  width: 80%;
   margin-top: 70px;
   font-size: 35px;
   line-height: 45px;
 }
-.cantact__body .right__subtitle {
+.contact__subtitle {
   margin-top: 10px;
   font-size: 15px;
   line-height: 20px;
 }
-.cantact__body .right__btn {
-  width: 60%;
-  margin-top: 70px;
+.contact__btn {
+  width: 40%;
+  margin-top: 50px;
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
   cursor: pointer;
 }
-.cantact__body .right__img {
-  width: 60%;
+.contact__left {
+  padding: 20px;
 }
-.cantact__body .right__img img {
+.contact__links {
+  padding: 50px 0;
+}
+.contact__links a span {
+  color: #0057FF;
+}
+.contact__icons {
+  margin-top: 20px;
+}
+.contact__icons a ~ a {
+  margin-left: 20px;
+}
+.contact__address {
+  width: 80%;
+  padding-bottom: 20px;
+}
+.contact__geoLink {
+  color: #0057FF;
+}
+.contact__logo {
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact__logoImg {
+  width: 50px;
+  height: 50px;
+}
+.contact__logoImg img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.contact__name {
+  font-size: 18px;
+  line-height: 18px;
+  display: block;
+}
+
+.contact__body {
+  height: calc(-webkit-max-content + 100px);
+  height: calc(-moz-max-content + 100px);
+  height: calc(max-content + 100px);
+}
+
+.contact__body .left {
+  padding: 40px;
+}
+.contact__body .left__contact {
+  margin: 50px 0;
+}
+.contact__body .left__contact p {
+  font-size: 18px;
+  line-height: 22px;
+}
+.contact__body .left__contact p span {
+  color: #0057FF;
+}
+.contact__body .left__address {
+  padding-bottom: 20px;
+  width: 283px;
+}
+.contact__body .left__link {
+  font-size: 15px;
+  line-height: 19px;
+  color: #0057FF;
+}
+.contact__body .left__icons {
+  margin-top: 20px;
+}
+.contact__body .left__icons:last-child {
+  margin-left: 15px;
 }
 
 .allCourses__inner {
@@ -1489,15 +1519,15 @@ html {
   opacity: 0.4;
   z-index: 2;
   top: 0;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .allCourses .card__body:hover, .allCourses .card__body:hover a p, .allCourses .card__body:hover a path {
   display: block;
   color: white;
   stroke: white;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .allCourses .card__body:hover::after {
   left: -110px;
@@ -1523,6 +1553,9 @@ html {
   -webkit-column-gap: 15px;
      -moz-column-gap: 15px;
           column-gap: 15px;
+}
+.course__body {
+  margin-top: 30px;
 }
 .course__left {
   width: 65%;
@@ -1586,7 +1619,6 @@ html {
   height: 54px;
   width: 40%;
   background-color: white;
-  border: none;
   outline: none;
   border-radius: 0 30px 30px 0;
   padding: 15px 0 15px 30px;
@@ -1596,7 +1628,7 @@ html {
   border: none;
   outline: none;
   border-radius: 0 30px 30px 0;
-  border-left: solid 1px black 0.3;
+  border-left: solid 1px #E7E7E7;
 }
 
 .course .titleBox {
@@ -1901,9 +1933,11 @@ html {
 
 .allNews .card {
   position: relative;
+  height: 265px;
   overflow: hidden;
   margin-top: 10px;
   width: calc(100% / 4 - 8px );
+  z-index: 201;
 }
 .allNews .card__img {
   position: relative;
@@ -1932,6 +1966,9 @@ html {
   width: 70%;
 }
 .allNews .card__body {
+  position: absolute;
+  bottom: 0;
+  z-index: 201;
   padding: 10px 20px 15px 20px;
 }
 .allNews .card__body p {
@@ -1951,14 +1988,16 @@ html {
   border-radius: 200px;
   background: #0057FF;
   opacity: 0.4;
-  z-index: 200;
   bottom: -393px;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .allNews .card__date {
   color: #000000;
   opacity: 0.56;
+}
+.allNews .card__main {
+  margin-top: 15px;
 }
 .allNews .card__main a {
   color: #0057FF;
@@ -1967,12 +2006,12 @@ html {
   display: block;
   color: white;
   stroke: white;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .allNews .card__body:hover::after {
-  left: -38.38%;
-  bottom: -102.6%;
+  left: -113px;
+  bottom: -264px;
   z-index: -1;
 }
 
@@ -2306,6 +2345,7 @@ html {
   border: none;
   outline: none;
   border-radius: 0 30px 30px 0;
+  border-left: 1px solid #E7E7E7;
 }
 .modalContent__btn {
   width: 100%;
@@ -2633,6 +2673,19 @@ html {
   .newsPage .card {
     width: 40%;
   }
+
+  .contact__body {
+    display: block;
+  }
+  .contact__inner {
+    padding-bottom: 45px;
+  }
+  .contact__btn {
+    margin-top: 40px;
+  }
+  .contact__main {
+    padding-bottom: 30px;
+  }
 }
 @media only screen and (max-width: 675px) {
   .banner {
@@ -2921,6 +2974,7 @@ html {
   }
   .modalContent__inputNumber {
     margin-top: 10px;
+    border: none;
   }
   .modalContent .modalContent__btn {
     margin-top: 10px;
@@ -2975,6 +3029,13 @@ html {
   }
   .allSchedule .card__text {
     width: 100%;
+  }
+
+  .cantact__body {
+    position: relative;
+    background: red;
+    width: 100%;
+    height: 748px;
   }
 }
 @media only screen and (max-width: 580px) {
@@ -3097,6 +3158,10 @@ html {
     width: 100%;
   }
 
+  .allCourses .card {
+    width: 100%;
+  }
+
   .allNews .titleBox {
     height: -webkit-max-content;
     height: -moz-max-content;
@@ -3126,6 +3191,29 @@ html {
 
   .newsPage .card {
     width: 100%;
+  }
+
+  .contact__right {
+    padding: 0 0 0 20px;
+  }
+  .contact__btn {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10px;
+    padding: 10px;
+    -webkit-column-gap: 5px;
+       -moz-column-gap: 5px;
+            column-gap: 5px;
+  }
+  .contact__main-title {
+    width: 90%;
+    font-size: 24px;
+    line-height: 26px;
+    margin-top: 150px;
+  }
+  .contact__subtitle {
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 @media only screen and (max-width: 420px) {

@@ -1,34 +1,31 @@
 const body = document.querySelector('body');
 const modal = document.getElementById('modal');
-const video1 = document.getElementById('authorVideo');
-
-const modalBtn2 = document.getElementById('btnConsultation');
-const closeBtn = document.getElementById('closeBtn');
-const closeBtn2 = document.getElementById('closeBtn2');
-
-const bodyBtn =document.getElementById('bodyBtn');
-const mindBtn =document.getElementById('mindBtn');
-const soulsBtn =document.getElementById('soulsBtn');
-const spiritBtn =document.getElementById('spiritBtn');
- 
-// closeBtn.addEventListener('click', closeModal);
-// closeBtn2.addEventListener('click', closeModal);
+const modal2 = document.getElementById('modal2') 
+const modalBtn2 = document.querySelector('.modalBtn2');
 
 let modalBtns = document.querySelectorAll('.modalBtn');
-
-
+let closeModalBtns = document.querySelectorAll('.modalCloseBtn');
+let closeModal2Btns = document.querySelectorAll('.modal2CloseBtn');
 let headerRight = document.querySelector('.rightBox');
+console.log(closeModal2Btns);
+modalBtn2.addEventListener('click', showModal2);
 
 function burgerMenu(x) {
   x.classList.toggle("change");
   headerRight.classList.toggle('activeBlock');
 }
 
-
 for(let i=0;i<modalBtns.length;i++){
   modalBtns[i].addEventListener('click', showModal);
 }
 
+for(let i=0; i<closeModalBtns.length; i++){
+  closeModalBtns[i].addEventListener('click', closeModal);
+}
+
+for(let i=0; i<closeModal2Btns.length; i++){
+  closeModal2Btns[i].addEventListener('click', closeModal2);
+}
 
 let tabBtns = document.getElementsByClassName("tabBtn");
 let tabcontent = document.getElementsByClassName('tabContent');
@@ -49,8 +46,18 @@ function showModal(){
  body.style.overflow = 'hidden'
 }
 
+function showModal2(){
+  modal2.classList.add('activ');
+  body.style.overflow = 'hidden'
+ }
+
 function closeModal(){
   modal.classList.remove('activ');
+  body.style.overflow = 'initial';
+}
+
+function closeModal2(){
+  modal2.classList.remove('activ');
   body.style.overflow = 'initial';
 }
 

@@ -308,6 +308,26 @@
   .newsPage .card{
     width: 40%;
   }
+
+  // cantact
+  .contact{
+
+    &__body{
+      display: block;
+    }
+
+    &__inner{
+      padding-bottom: 45px;
+    }
+
+    &__btn{
+      margin-top: 40px;
+    }
+
+    &__main{
+      padding-bottom: 30px;
+    }
+  }
 }
 
 @media only screen and (max-width: 675px) {
@@ -660,6 +680,7 @@
 
   &__inputNumber{
     margin-top: 10px;
+    border: none;
   }
 
 
@@ -725,6 +746,17 @@
     width: 100%;
   }
  }
+
+ .cantact{
+
+  &__body{
+    position: relative;
+    background: red;
+    width: 100%;
+    height: 748px;
+  }
+ }
+
 }
 
 @media only screen and (max-width: 580px){
@@ -879,6 +911,10 @@
     width: 100%;
   }
 
+  .allCourses .card{
+    width: 100%;
+  }
+
   .allNews .titleBox{
     height: max-content;
     padding: 20px;
@@ -893,6 +929,8 @@
       }
     }
   }
+
+
 
   .newsPage .titleBox{
     padding: 20px;
@@ -914,6 +952,33 @@
 
   .newsPage .card{
     width: 100%;
+  }
+
+  .contact{
+
+    &__right{
+      padding: 0 0 0 20px;
+    }
+
+    &__btn{
+      width: 80%;
+      margin-left: 10%;
+      margin-top: 10px;
+      padding: 10px;
+      column-gap: 5px;
+    }
+
+    &__main-title{
+      width: 90%;
+      font-size: 24px;
+      line-height: 26px;
+      margin-top: 150px;
+    }
+
+    &__subtitle{
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
 }

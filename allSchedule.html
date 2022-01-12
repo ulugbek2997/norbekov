@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./style/style.css">
   <title>AllSchedule</title>
 </head>
@@ -14,7 +15,7 @@
       <div class="header__inner">
         <div class="header__left d-flex alItem-center">
           <div class="header__logo">
-            <img src="./img/image 4.png" alt="">  
+            <img src="./img/logo.png" alt="">  
           </div>
           <div class="burger" onclick="burgerMenu(this)">
             <div class="bar1"></div>
@@ -41,7 +42,7 @@
               <a href="tel:+99893 561-62-76">
                 <p  class="ir__regular">(+998)93 561-62-76</p>
               </a>
-              <a class="ir__regular" href="">Заказать звонок</a>
+              <span class="ir__regular modalBtn" href="">Заказать звонок</span>
             </div>
           </div>
         </div>
@@ -58,7 +59,7 @@
             <h2 class="mt__semiBold">Расписание курсов</h2>
             <p class="ir__regular">Главная / <span>Все курсы</span></p>
           </div>
-          <button class="titleBox__right btn btn__blue">
+          <button class="titleBox__right btn btn__blue modalBtn">
               <p class="ir__medium">Получить консультацию</p>
               <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.60902 11.8203V2.72234C4.60902 1.71734 5.42402 0.902344 6.42902 0.902344C7.43402 0.902344 8.24902 1.71734 8.24902 2.72234V6.36134L14.238 7.69834C15.64 7.97834 16.65 9.21034 16.65 10.6403V14.3343C16.65 15.0743 16.478 15.8033 16.147 16.4653C15.34 18.0793 13.69 19.0993 11.885 19.0993H9.00702C6.71502 19.0993 4.56902 17.9773 3.26002 16.0963L2.15202 14.5043C1.63502 13.9493 1.34802 13.2193 1.34802 12.4603V9.40934" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -322,6 +323,47 @@
       </div>
     </div>
   </footer>
+
+
+  <div id="modal" class="modal jyContent-center alItem-center">
+    <div class="container">
+      <div class="modalContent">
+      <div class="modalContent__btn-close">
+        <button class="modalCloseBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.889587 0.845825L23.1104 23.0625M0.889587 23.0625L23.1104 0.845825" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+      </div>
+      <div class="modalContent__title mt__semiBold">Оставить заявку</div>
+      <div class="modalContent__subtitle ir__light">
+        Оставте ваши данные и наши эксперты свяжуться с вами.
+      </div>
+      <form action="">
+      <div class="modalContent__inputs d-flex jyContent-center">
+        <input class="modalContent__inputName" type="text" placeholder="*Ваше имя">
+        <input class="modalContent__inputNumber" type="text" placeholder="*Номер телефона">
+      </div>
+      <div class="modalContent__btn jyContent-center">
+        <button type="submit" class="btn btn__blue">
+          <p class="ir__medium">Получить консультацию</p>
+          <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.60902 11.8203V2.72234C4.60902 1.71734 5.42402 0.902344 6.42902 0.902344C7.43402 0.902344 8.24902 1.71734 8.24902 2.72234V6.36134L14.238 7.69834C15.64 7.97834 16.65 9.21034 16.65 10.6403V14.3343C16.65 15.0743 16.478 15.8033 16.147 16.4653C15.34 18.0793 13.69 19.0993 11.885 19.0993H9.00702C6.71502 19.0993 4.56902 17.9773 3.26002 16.0963L2.15202 14.5043C1.63502 13.9493 1.34802 13.2193 1.34802 12.4603V9.40934" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+      </div>
+    </form>
+      <div class="modalContent__btn-close2 jyContent-center alItem-center">
+        <button  class="modalCloseBtn d-flex alItem-center">
+          <p>Закрыть</p>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.889587 0.845825L23.1104 23.0625M0.889587 23.0625L23.1104 0.845825" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+      </div>
+        </div>
+    </div>
+  </div>
 <script src="./js/index.js"></script>
 </body>
 </html>

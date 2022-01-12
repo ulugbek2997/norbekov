@@ -22,6 +22,17 @@ html{
     column-gap: 30px;
   }
 
+  &__logo{
+    width: 111px;
+    height: 82px;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
 }
 
 .header__right .rightBox{
@@ -41,21 +52,19 @@ html{
 
   &__contact{
     text-align: end;
+    
     p{
       font-size: 18px;
       line-height: 22px;
     }
 
-    a{
+    span{
+      font-size: 18px;
+      line-height: 18px;
       color: $textColor2;
       border-bottom: solid 1px $color1;
+      cursor: pointer;
     }
-  }
-
-  &__contact a p:last-child{
-    font-size: 15px;
-    line-height: 18px;
-    color: black;
   }
 }
 
@@ -474,7 +483,7 @@ html{
       opacity: 0.4;
       z-index: 2;
       top: 0;
-      transition: 2s;
+      transition: 0.5s;
     }
   }
 
@@ -485,7 +494,7 @@ html{
     display: block;
     color: white;
     stroke:white;
-    transition: 2s;
+    transition: 0.5s;
   }
 
   &__body:hover{
@@ -499,7 +508,9 @@ html{
 .schedule{
 
   .container{
-    background: url('../img/Frame\ 265.jpg');
+    background: url('../img/fonSchoodel.png');
+    background-size: cover;
+    background-position: top;
   }
   &__inner{
     width: 85%;
@@ -994,6 +1005,7 @@ html{
 
 .news__slider{
   position: relative;
+  
 
   .swiper2 {
     position: static;
@@ -1004,7 +1016,6 @@ html{
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -1073,15 +1084,26 @@ html{
   }
 
   &__text{
-    font-size: 15px;
-    line-height: 22px;
-    text-align: start;
-    cursor: pointer;
+    p{
+      font-size: 15px;
+      line-height: 22px;
+      text-align: start;
+      cursor: pointer;
+    }
   }
 
   &__text:hover{
-    color: $textColor2;
+
   }
+
+}
+
+.slide2:hover  {
+  background-color: white;
+
+}
+.slide2:hover .slide2__text{
+  color: $textColor2;
 }
 
 .lastPage{
@@ -1237,6 +1259,7 @@ html{
 .contact{
   &__inner{
     width: 85%;
+    padding-bottom: 40px;
 
     iframe{
       width: 100%;
@@ -1249,48 +1272,101 @@ html{
     line-height: 50px;
     padding-bottom: 35px; ;
   }
-}
 
-.contact .header{
-  padding: 20px 0;
-}
+  &__right{
+    background-color: $background3;
+    padding: 0 0 0 40px;
+    width: 100%;
+  }
 
-.contact .header .rightBox{
+  &__main{
+    background-image: url(../img/cantactPage_img.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
 
-  &__number{
+  &__main-title{
+
+    width: 80%;
+    margin-top: 70px;
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  &__subtitle{
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  &__btn{
+    width: 40%;
+    margin-top: 50px;
+    column-gap: 10px;
+    cursor: pointer;
+  }
+
+  &__left{
+    padding: 20px;
+  }
+
+  &__links{
+    padding: 50px 0;
     a{
-      column-gap: 5px;
-      cursor: pointer;
-      p{
-        color: black;
-      }
-
       span{
-        color: $textColor2
+        color: $textColor2;
       }
     }
-
-
-
   }
+
+  &__icons{
+    margin-top: 20px;
+
+    a~a{
+      margin-left: 20px;
+    }
+  }
+
+  &__address{
+    width: 80%;
+    padding-bottom: 20px;
+  }
+
+  &__geoLink{
+    color: $textColor2;
+  }
+
+  &__logo{
+    column-gap: 10px;
+    align-items: center;
+  }
+
+  &__logoImg{
+    width: 50px;
+    height: 50px;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__name{
+    font-size: 18px;
+    line-height: 18px;
+    display: block;
+  }
+
 }
 
-.cantact__body{
+.contact__body{
   height: calc(max-content + 100px);
 }
 
-.cantact__body .left{
+.contact__body .left{
   padding: 40px;
-   &__logo{
-     width: 142px;
-     height: 36px;
-
-     img{
-       width: 100%;
-       height: 100%;
-       object-fit: cover;
-     }
-   }
 
    &__contact{
      margin: 50px 0;
@@ -1323,40 +1399,6 @@ html{
     margin-left: 15px;
   }
 
-}
-
-.cantact__body .right{
-  padding: 0 0 0 40px;
-  background-color: $background3;
-
-  &__title{
-    margin-top: 70px;
-    font-size: 35px;
-    line-height: 45px;
-  }
-
-  &__subtitle{
-    margin-top: 10px;
-    font-size: 15px;
-    line-height: 20px;
-  }
-
-  &__btn{
-    width: 60%;
-    margin-top: 70px;
-    column-gap: 10px;
-    cursor: pointer;
-  }
-
-  &__img{
-    width: 60%;
-
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit:cover ;
-    }
-  }
 }
 
 // allCourses
@@ -1496,7 +1538,7 @@ html{
       opacity: 0.4;
       z-index: 2;
       top: 0;
-      transition: 2s;
+      transition: 0.5s;
     }
   }
 
@@ -1507,7 +1549,7 @@ html{
     display: block;
     color: white;
     stroke:white;
-    transition: 2s;
+    transition: 0.5s;
   }
 
   &__body:hover{
@@ -1540,6 +1582,10 @@ html{
     button{
       column-gap: 15px;
     }
+  }
+
+  &__body{
+    margin-top: 30px;
   }
 
   &__left{
@@ -1604,7 +1650,6 @@ html{
     height: 54px;
     width: 40%;
     background-color: white;
-    border: none;
     outline: none;
     border-radius: 0 30px 30px 0;
     padding: 15px 0 15px 30px;
@@ -1614,7 +1659,7 @@ html{
     border: none;
     outline: none;
     border-radius: 0 30px 30px 0;
-    border-left: solid 1px black  0.3;
+    border-left: solid 1px #E7E7E7 ;
   }
 
 }
@@ -1977,9 +2022,11 @@ html{
 
 .allNews .card{
   position: relative;
+  height: 265px;
   overflow: hidden;
   margin-top: 10px;
   width: calc(100% / 4 - 8px );
+  z-index: 201;
 
   &__img{
     position: relative;
@@ -2010,7 +2057,9 @@ html{
   }
   
   &__body{
-    // position: relative;
+    position: absolute;
+    bottom: 0;
+    z-index: 201  ;
     padding: 10px 20px 15px 20px ;
 
     p{
@@ -2030,9 +2079,8 @@ html{
       border-radius: 200px;
       background: #0057FF;
       opacity: 0.4;
-      z-index: 200;
       bottom: -393px;
-      transition: 2s;
+      transition: 0.5s;
     }
   }
 
@@ -2042,6 +2090,7 @@ html{
   }
 
   &__main{
+    margin-top: 15px;
     a{
         color: $textColor2;
     }
@@ -2055,13 +2104,13 @@ html{
     display: block;
     color: white;
     stroke:white;
-    transition: 2s;
+    transition: 0.3s;
   }
 
   &__body:hover{
     &::after {
-      left: -38.38%;
-      bottom: -102.6%;
+      left: -113px;
+      bottom: -264px;
       z-index: -1;
     }   
   }
@@ -2441,6 +2490,7 @@ html{
     border: none;
     outline: none;
     border-radius: 0 30px 30px 0;
+    border-left: 1px solid #E7E7E7;
   }
 
   &__btn{
